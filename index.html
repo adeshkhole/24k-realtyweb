@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="24k Realty is Pune's premier real estate consultancy, offering premium flats and commercial spaces in Kharadi, Wagholi, and nearby. Setting the gold standard.">
+    <meta name="keywords" content="24k Realty, Real Estate Pune, Flats in Wagholi, Commercial Showrooms Kharadi, Godrej The Gale, Millennium Falcon">
+    <meta name="author" content="24K Realty">
+    
+    <title>24k Realty - Setting the Gold Standard in Real Estate</title>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="shortcut icon" href="assets/images/logo-light.png" type="image/png">
+</head>
+<body>
+
+    <!-- --- Header Navigation --- -->
+    <header class="site-header" id="siteHeader">
+        <div class="container">
+            <div class="header-wrap">
+                <!-- Brand Logo -->
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo-light.png" alt="24K Realty Gold Logo">
+                </a>
+                
+                <!-- Desktop Menu -->
+                <nav class="desktop-nav">
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- CTA Header Button & Hamburger -->
+                <div class="header-action">
+                    <a href="#" class="btn btn-primary trigger-enquiry" data-property="General Consultation" style="padding: 10px 20px; font-size: 0.8rem;">Enquire Now</a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <button class="modal-close-btn" id="drawerClose" style="position: absolute; top: 24px; right: 24px;">&times;</button>
+        <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="#" class="btn btn-primary trigger-enquiry" data-property="General Consultation" style="margin-top: 20px;">Book Consultation</a>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- --- Hero Banner Section --- -->
+    <section class="hero-slider">
+        <!-- Slide 1 -->
+        <div class="hero-slide active" style="background-image: url('assets/images/hero_bg_1.jpg');">
+            <div class="container">
+                <div class="hero-content-wrap">
+                    <h1 class="text-gold-gradient">24k Realty: Setting the Gold Standard in Real Estate.</h1>
+                    <p>We specialize in bridging the gap between dream spaces and reality, offering expert guidance across residential and commercial sectors in Pune.</p>
+                    <div class="hero-ctas">
+                        <a href="properties.html" class="btn btn-primary">Browse New Launches</a>
+                        <a href="contact.html" class="btn btn-secondary">Book Site Visit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="hero-slide" style="background-image: url('assets/images/hero_bg_2.jpg');">
+            <div class="container">
+                <div class="hero-content-wrap">
+                    <h1 class="text-gold-gradient">Your Vision. Our Expertise. Real Estate Excellence.</h1>
+                    <p>Whether you are looking for a modern lifestyle or a strategic business location, we ensure every transaction is transparent, efficient, and rewarding.</p>
+                    <div class="hero-ctas">
+                        <a href="properties.html?type=commercial" class="btn btn-primary">Find a Showroom</a>
+                        <a href="services.html" class="btn btn-secondary">Our Expertise</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="hero-slide" style="background-image: url('assets/images/hero_bg_3.jpg');">
+            <div class="container">
+                <div class="hero-content-wrap">
+                    <h1 class="text-gold-gradient">Invest in Quality. Invest with 24k Realty.</h1>
+                    <p>Data-driven insights to help you identify high-growth areas in Pune for long-term real estate appreciation and maximum rental yields.</p>
+                    <div class="hero-ctas">
+                        <a href="contact.html" class="btn btn-primary">Book Free Consultation</a>
+                        <a href="properties.html" class="btn btn-secondary">List Your Property</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Navigation Arrows -->
+        <div class="hero-controls">
+            <div class="hero-arrow" id="heroPrev"><i class="fa-solid fa-arrow-left"></i></div>
+            <div class="hero-arrow" id="heroNext"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+    </section>
+
+    <!-- --- Quick Filter Search Box --- -->
+    <section class="container search-filter-panel">
+        <div class="glass-card reveal reveal-scale" style="padding: 24px 32px;">
+            <div class="filter-grid">
+                <div class="filter-group">
+                    <label for="searchType">Property Type</label>
+                    <select class="filter-select" id="searchType">
+                        <option value="all">All Properties</option>
+                        <option value="residential">Residential Flats</option>
+                        <option value="commercial">Commercial Showrooms/Offices</option>
+                        <option value="resale">Resale Properties</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="searchLocation">Location Area</label>
+                    <select class="filter-select" id="searchLocation">
+                        <option value="">Select Location</option>
+                        <option value="Wagholi">Wagholi, Pune</option>
+                        <option value="Kharadi">Kharadi, Pune</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="searchBudget">Max Budget</label>
+                    <select class="filter-select" id="searchBudget">
+                        <option value="">Any Price</option>
+                        <option value="80">Under ₹80 Lakh</option>
+                        <option value="100">Under ₹1.2 Cr</option>
+                        <option value="200">Above ₹1.5 Cr</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" id="filterSearchBtn" style="width: 100%; height: 50px;">
+                    <i class="fa-solid fa-magnifying-glass" style="margin-right: 8px;"></i> Search
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Executive Summary Section --- -->
+    <section class="section-padding" style="background-color: var(--bg-dark);">
+        <div class="container">
+            <div class="why-us-split">
+                <div class="why-us-content reveal reveal-left" style="order: 1;">
+                    <span style="color: var(--text-gold); font-family: var(--font-heading); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 12px;">Executive Summary</span>
+                    <h2 class="shimmer-text" style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 24px; font-weight: 600;">Bridging the Gap Between Dream Spaces and Reality.</h2>
+                    <p style="margin-bottom: 24px; font-size: 1.05rem; line-height: 1.8;">24k Realty is a premier real estate consultancy firm dedicated to providing gold-standard service in the property market. Whether you are looking for a modern lifestyle home or a strategic high-visibility business location, we ensure every transaction is transparent, efficient, and rewarding.</p>
+                    <p style="margin-bottom: 32px;">From initial site visits to final verified documentation, our expert consultants manage the heavy lifting so you don't have to. Experience the "24k standard" of service and reliability.</p>
+                    <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
+                </div>
+                
+                <div class="why-us-visual reveal reveal-right" style="order: 2;">
+                    <!-- Elegant Dark-Gold Aesthetic Image Frame -->
+                    <div style="width: 100%; height: 420px; border-radius: var(--border-radius-lg); background: linear-gradient(135deg, rgba(229, 178, 62, 0.15) 0%, rgba(7, 9, 12, 0.9) 100%); border: var(--border-glass-gold); display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="text-align: center; padding: 40px;">
+                            <img src="assets/images/logo-light.png" alt="24K Logo Symbol" style="height: 120px; width: auto; margin-bottom: 24px;">
+                            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 12px;">The 24K Standard</h3>
+                            <p style="max-width: 320px; margin: 0 auto; font-size: 0.9rem;">Excellence, Integrity, and Personalized Solutions for Every Client.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card stats-card-overlay" style="background: rgba(20, 24, 34, 0.95);">
+                        <span class="stats-num stat-counter">100%</span>
+                        <span class="stats-text">Verified Listings</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Our Expertise (Working Profile) --- -->
+    <section class="section-padding" style="background-color: var(--bg-surface);">
+        <div class="container">
+            <div class="section-title-wrap reveal">
+                <span class="subtitle">Our Expertise</span>
+                <h2 class="shimmer-text">Comprehensive Property Solutions</h2>
+            </div>
+            
+            <div class="expertise-grid reveal-stagger">
+                <!-- Card 1 -->
+                <div class="glass-card expertise-card">
+                    <div class="expertise-icon-wrap">
+                        <i class="fa-solid fa-house-chimney fa-2x"></i>
+                    </div>
+                    <h3>Residential New Launches</h3>
+                    <p>Exclusive access to the latest premium flat and apartment projects in Pune with end-to-end site visit assistance.</p>
+                    <a href="services.html" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="glass-card expertise-card">
+                    <div class="expertise-icon-wrap">
+                        <i class="fa-solid fa-building-user fa-2x"></i>
+                    </div>
+                    <h3>Commercial Spaces</h3>
+                    <p>Strategic consultancy for high-visibility showrooms and modern office spaces to elevate your business presence.</p>
+                    <a href="services.html" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="glass-card expertise-card">
+                    <div class="expertise-icon-wrap">
+                        <i class="fa-solid fa-handshake fa-2x"></i>
+                    </div>
+                    <h3>Resale Services</h3>
+                    <p>A curated portfolio of pre-owned residential and commercial properties, ensuring verified documents and valuation.</p>
+                    <a href="services.html" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="glass-card expertise-card">
+                    <div class="expertise-icon-wrap">
+                        <i class="fa-solid fa-chart-line fa-2x"></i>
+                    </div>
+                    <h3>Investment Advisory</h3>
+                    <p>Data-driven insights to help you identify high-growth areas in Pune for maximum long-term real estate appreciation.</p>
+                    <a href="services.html" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Featured Projects Section --- -->
+    <section class="section-padding" style="background-color: var(--bg-dark);">
+        <div class="container">
+            <div class="section-title-wrap reveal">
+                <span class="subtitle">Premium Selections</span>
+                <h2 class="shimmer-text">Featured New Launches</h2>
+            </div>
+            
+            <div class="properties-grid reveal-stagger">
+                <!-- Project 1: Godrej The Gale -->
+                <div class="property-card">
+                    <div class="property-image-wrap">
+                        <img src="assets/images/godrej-gale-banner.jpg" alt="Godrej The Gale Kharadi">
+                        <div class="property-badge badge-launch">New Launch</div>
+                        <a href="property-single.html?project=godrej-the-gale" class="btn btn-primary property-details-btn" style="padding: 8px 16px; font-size: 0.75rem;">View Details</a>
+                    </div>
+                    <div class="property-content-block">
+                        <div class="property-price">₹85 Lakh* <span style="font-size: 0.8rem; font-weight: 400; color: var(--text-muted);">onwards</span></div>
+                        <h3 class="property-title">Godrej The Gale</h3>
+                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Kharadi, Pune</div>
+                        <p style="font-size: 0.85rem; margin-bottom: 16px;">Premium resort-lifestyle apartments with luxury amenities and IT park proximity.</p>
+                        <div class="property-specs-strip">
+                            <div class="spec-item"><i class="fa-solid fa-bed"></i> <span>2 & 3 BHK</span></div>
+                            <div class="spec-item"><i class="fa-solid fa-expand"></i> <span>750-1100 sqft</span></div>
+                        </div>
+                        <div style="margin-top: 20px; display: flex; gap: 10px;">
+                            <a href="#" class="btn btn-primary trigger-enquiry" data-property="Godrej The Gale" style="flex: 1; padding: 10px; font-size: 0.8rem;">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Millennium Falcon -->
+                <div class="property-card">
+                    <div class="property-image-wrap">
+                        <img src="assets/images/millennium-falcon-banner.jpg" alt="Millennium Falcon Wagholi">
+                        <div class="property-badge badge-launch">Luxury Project</div>
+                        <a href="property-single.html?project=millennium-falcon" class="btn btn-primary property-details-btn" style="padding: 8px 16px; font-size: 0.75rem;">View Details</a>
+                    </div>
+                    <div class="property-content-block">
+                        <div class="property-price">₹92 Lakh* <span style="font-size: 0.8rem; font-weight: 400; color: var(--text-muted);">onwards</span></div>
+                        <h3 class="property-title">Millennium Falcon</h3>
+                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Wagholi, Pune</div>
+                        <p style="font-size: 0.85rem; margin-bottom: 16px;">Ultra-spacious residential apartments with large deck terraces and luxury finishes.</p>
+                        <div class="property-specs-strip">
+                            <div class="spec-item"><i class="fa-solid fa-bed"></i> <span>3 & 4 BHK</span></div>
+                            <div class="spec-item"><i class="fa-solid fa-expand"></i> <span>1250-1800 sqft</span></div>
+                        </div>
+                        <div style="margin-top: 20px; display: flex; gap: 10px;">
+                            <a href="#" class="btn btn-primary trigger-enquiry" data-property="Millennium Falcon" style="flex: 1; padding: 10px; font-size: 0.8rem;">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Prime Commercial Plaza -->
+                <div class="property-card">
+                    <div class="property-image-wrap">
+                        <img src="assets/images/commercial-plaza-banner.jpg" alt="Commercial Spaces Kharadi">
+                        <div class="property-badge badge-commercial">Commercial</div>
+                        <a href="property-single.html?project=prime-commercial-plaza" class="btn btn-primary property-details-btn" style="padding: 8px 16px; font-size: 0.75rem;">View Details</a>
+                    </div>
+                    <div class="property-content-block">
+                        <div class="property-price">₹1.5 Cr* <span style="font-size: 0.8rem; font-weight: 400; color: var(--text-muted);">onwards</span></div>
+                        <h3 class="property-title">Prime Commercial Plaza</h3>
+                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Kharadi-Wagholi, Pune</div>
+                        <p style="font-size: 0.85rem; margin-bottom: 16px;">High-visibility retail showrooms and modern office suites along highway stretch.</p>
+                        <div class="property-specs-strip">
+                            <div class="spec-item"><i class="fa-solid fa-shop"></i> <span>Showrooms/Offices</span></div>
+                            <div class="spec-item"><i class="fa-solid fa-expand"></i> <span>450-2500 sqft</span></div>
+                        </div>
+                        <div style="margin-top: 20px; display: flex; gap: 10px;">
+                            <a href="#" class="btn btn-primary trigger-enquiry" data-property="Prime Commercial Plaza" style="flex: 1; padding: 10px; font-size: 0.8rem;">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="properties.html" class="btn btn-secondary">Explore All Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Why Choose 24k Realty? --- -->
+    <section class="section-padding" style="background-color: var(--bg-surface);">
+        <div class="container">
+            <div class="why-us-split">
+                <div class="why-us-visual reveal reveal-left" style="order: 1;">
+                    <!-- Showcase of Gold Shield/Aesthetic -->
+                    <div style="width: 100%; height: 440px; border-radius: var(--border-radius-lg); background: linear-gradient(135deg, rgba(7, 9, 12, 0.95) 0%, rgba(229, 178, 62, 0.08) 100%); border: var(--border-glass-gold); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 30px; box-shadow: var(--shadow-soft);">
+                        <div style="font-size: 3.5rem; color: var(--text-gold); margin-bottom: 20px;"><i class="fa-solid fa-award"></i></div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 12px; font-weight: 500;">Gold Standard Assurance</h3>
+                        <p style="max-width: 320px; color: var(--text-muted); font-size: 0.95rem;">Every client interaction is governed by strict transparency, verified credentials, and local market intelligence.</p>
+                        <div style="display: flex; gap: 24px; margin-top: 30px;">
+                            <div>
+                                <span class="stat-counter" style="font-size: 1.8rem; font-weight: 700; color: var(--text-gold); display: block;">100%</span>
+                                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Transparency</span>
+                            </div>
+                            <div style="border-left: 1px solid rgba(255, 255, 255, 0.1);"></div>
+                            <div>
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--text-gold); display: block;">End-to-End</span>
+                                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Assistance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="why-us-content reveal reveal-right" style="order: 2;">
+                    <span class="subtitle">Why Choose Us</span>
+                    <h2 class="shimmer-text" style="font-family: var(--font-serif); font-size: 2.25rem;">The 24k Standard of Excellence</h2>
+                    
+                    <div class="checklist-grid">
+                        <div class="checklist-item">
+                            <div class="checklist-check"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4>Client-Centric Approach</h4>
+                                <p>Your requirements are our blueprint. We listen first, then suggest. Your dream home is our priority.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="checklist-item">
+                            <div class="checklist-check"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4>Deep Market Intelligence</h4>
+                                <p>Deep local expertise in Pune's real estate landscape to find you the best deals before they hit the general market.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="checklist-item">
+                            <div class="checklist-check"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4>Absolute Transparency</h4>
+                                <p>No hidden costs or complex jargon. We provide clear, honest communication at every step of your transaction.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="checklist-item">
+                            <div class="checklist-check"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4>Seamless Execution</h4>
+                                <p>From guided site visits to final documentation verification and registration paperwork, we manage the heavy lifting.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Testimonials Section --- -->
+    <section class="section-padding" style="background-color: var(--bg-dark);">
+        <div class="container">
+            <div class="section-title-wrap reveal">
+                <span class="subtitle">Testimonials</span>
+                <h2 class="shimmer-text">Client Success Stories</h2>
+            </div>
+            
+            <div class="testimonials-slider-container reveal reveal-scale">
+                <!-- Slide 1 -->
+                <div class="testimonial-slide-card active">
+                    <div class="client-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "We booked our dream 3 BHK flat at Millennium Falcon through 24k Realty. Their team explained everything transparently and assisted us with the entire paperwork. The gold standard service indeed!"
+                    </blockquote>
+                    <div class="client-info">
+                        <h4>Amit Sharma</h4>
+                        <span>Millennium Falcon Booker</span>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="testimonial-slide-card">
+                    <div class="client-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "Finding the right commercial showroom is tough. The team at 24k Realty analysed locations and budget, closing the Godrej The Gale shop deal smoothly. Highly recommend their market intelligence!"
+                    </blockquote>
+                    <div class="client-info">
+                        <h4>Rajesh Patil</h4>
+                        <span>Godrej The Gale Investor</span>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="testimonial-slide-card">
+                    <div class="client-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "Professionalism and transparency are rare in real estate. 24k Realty has both. No hidden costs, clear consultations. Site visits were fully guided and timed."
+                    </blockquote>
+                    <div class="client-info">
+                        <h4>Nisha Mehta</h4>
+                        <span>Residential Buyer</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Indicators Dots -->
+            <div class="testimonial-controls" id="testimonialDots"></div>
+        </div>
+    </section>
+
+    <!-- --- Contact Us Section --- -->
+    <section class="section-padding" style="background-color: var(--bg-surface);" id="contact">
+        <div class="container">
+            <div class="contact-section-split">
+                <div class="contact-info-block reveal reveal-left">
+                    <div>
+                        <span class="subtitle" style="text-align: left; margin: 0;">Get In Touch</span>
+                        <h2 class="shimmer-text" style="font-family: var(--font-serif); font-size: 2.25rem; margin-top: 8px;">Let's Connect</h2>
+                        <p style="margin-top: 14px;">Whether you are looking for your dream home or a strategic business location, our expert consultants are here to guide you every step of the way.</p>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h4>Office Address</h4>
+                            <p>Wagholi, Pune, Maharashtra 412207</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:24k.realty.1@gmail.com">24k.realty.1@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h4>Call / WhatsApp</h4>
+                            <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon-box"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Monday – Saturday: 10:00 AM – 7:00 PM<br>Sunday: By Appointment Only</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-block glass-card reveal reveal-right">
+                    <h3 style="margin-bottom: 24px; font-size: 1.35rem; font-weight: 600;">Request a Free Consultation</h3>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-control-wrap">
+                            <input type="text" placeholder="Your Name" class="form-input" required>
+                        </div>
+                        <div class="form-control-wrap">
+                            <input type="email" placeholder="Your Email" class="form-input" required>
+                        </div>
+                        <div class="form-control-wrap form-full-width">
+                            <input type="tel" placeholder="Phone Number" class="form-input" required>
+                        </div>
+                        <div class="form-control-wrap form-full-width">
+                            <select class="form-input" style="background: rgba(255, 255, 255, 0.03); color: var(--text-light);" required>
+                                <option value="" style="background: var(--bg-surface); color: var(--text-muted);">Property Interest</option>
+                                <option value="Residential" style="background: var(--bg-surface); color: var(--text-light);">Residential Flats</option>
+                                <option value="Commercial" style="background: var(--bg-surface); color: var(--text-light);">Commercial Spaces</option>
+                                <option value="Investment" style="background: var(--bg-surface); color: var(--text-light);">Investment Advisory</option>
+                            </select>
+                        </div>
+                        <div class="form-control-wrap form-full-width">
+                            <textarea placeholder="Your Message" class="form-textarea" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary form-full-width" style="height: 50px;">Book Free Consultation</button>
+                    </form>
+                    
+                    <!-- Success overlay animation -->
+                    <div class="form-success-overlay">
+                        <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <h3>Consultation Booked!</h3>
+                        <p>Our gold standard property consultant will call you within 2 business hours.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map Embed -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.1287959080757!2d73.97880947599026!3d18.568282367715617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3c54c30c9eb%3A0xe54ef84c79402e6d!2sWagholi%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1718276098000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Footer --- -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/logo-light.png" alt="24k Realty Footer Logo" class="footer-logo">
+                    <p>Premier real estate consultancy firm dedicated to providing gold-standard service in Pune. Dream spaces bridged to reality.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/24k_realty?igsh=dnp0ZDlnb3Juazho" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BSKggxUkM/" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Details</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Wagholi, Pune, Maharashtra 412207</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:24k.realty.1@gmail.com">24k.realty.1@gmail.com</a></li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 24k Realty. All Rights Reserved.</p>
+                <p style="font-size: 0.8rem; color: rgba(255,255,255,0.1);">Designed with 24k Gold Standard</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- --- Floating WhatsApp Widget --- -->
+    <div class="whatsapp-widget">
+        <a href="#" class="whatsapp-btn" id="whatsappWidget" aria-label="Chat with 24k Realty on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- --- Interactive Inquiry Modal Overlay --- -->
+    <div class="inquiry-modal-overlay" id="inquiryModalOverlay">
+        <div class="inquiry-modal">
+            <div class="modal-header">
+                <h3>Express Your Interest</h3>
+                <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <span id="modalSubtitle" style="display: block; font-family: var(--font-heading); font-size: 0.9rem; color: var(--text-gold); margin-bottom: 20px; text-transform: uppercase; font-weight: 600;">Enquiry for: Godrej The Gale</span>
+                
+                <form id="modalForm" style="display: flex; flex-direction: column; gap: 16px;">
+                    <input type="hidden" id="modalPropertyTitle" value="General">
+                    <div class="form-control-wrap">
+                        <input type="text" placeholder="Your Name" class="form-input" required style="width: 100%;">
+                    </div>
+                    <div class="form-control-wrap">
+                        <input type="email" placeholder="Your Email" class="form-input" required style="width: 100%;">
+                    </div>
+                    <div class="form-control-wrap">
+                        <input type="tel" placeholder="Phone Number" class="form-input" required style="width: 100%;">
+                    </div>
+                    <div class="form-control-wrap">
+                        <textarea placeholder="Write your requirements (budget, BHK size, timeline)..." class="form-textarea" required style="width: 100%; height: 100px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                </form>
+                
+                <!-- Success overlay inside modal -->
+                <div class="form-success-overlay">
+                    <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <h3>Inquiry Received!</h3>
+                    <p>Our property manager is preparing property details and brochure for you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Controller Script -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

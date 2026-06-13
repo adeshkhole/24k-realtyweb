@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about our real estate consultancy services, including residential launches, commercial spaces, resale, and investment advisory in Pune.">
+    <meta name="keywords" content="Real Estate Services Pune, Commercial consultancy, Flat site visit Wagholi, Land investment Pune">
+    <meta name="author" content="24K Realty">
+    
+    <title>Services - 24k Realty</title>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="shortcut icon" href="assets/images/logo-light.png" type="image/png">
+</head>
+<body>
+
+    <!-- --- Header Navigation --- -->
+    <header class="site-header scrolled" id="siteHeader">
+        <div class="container">
+            <div class="header-wrap">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo-light.png" alt="24K Realty Gold Logo">
+                </a>
+                
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li class="active"><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-action">
+                    <a href="#" class="btn btn-primary trigger-enquiry" data-property="General Consultation" style="padding: 10px 20px; font-size: 0.8rem;">Enquire Now</a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <button class="modal-close-btn" id="drawerClose" style="position: absolute; top: 24px; right: 24px;">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li class="active"><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="#" class="btn btn-primary trigger-enquiry" data-property="General Consultation" style="margin-top: 20px;">Book Consultation</a>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- --- Inner Page Hero Banner --- -->
+    <section class="inner-hero" style="background-image: url('assets/images/hero_bg_2.jpg');">
+        <div class="container">
+            <h1 class="text-gold-gradient shimmer-text">Our Services</h1>
+            <div class="breadcrumb-path">
+                <a href="index.html">Home</a>
+                <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; align-self: center;"></i>
+                <span>Services</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Services Breakdown --- -->
+    <section class="section-padding" style="background-color: var(--bg-dark);">
+        <div class="container" style="display: flex; flex-direction: column; gap: 80px;">
+            
+            <!-- Service 1: Residential Launches -->
+            <div class="why-us-split">
+                <div class="why-us-content reveal reveal-left" style="order: 1;">
+                    <div style="font-size: 2.2rem; color: var(--text-gold); margin-bottom: 16px;"><i class="fa-solid fa-hotel"></i></div>
+                    <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 16px;">Residential New Launches</h2>
+                    <p style="margin-bottom: 16px; font-size: 1.05rem;">We provide exclusive access to premium flat and apartment projects before they reach the general public. Benefit from direct relations with elite builders (like Godrej, etc.) in high-growth IT corridors in Pune.</p>
+                    <p style="margin-bottom: 24px;">Our team handles complete guided transport, site visit assistance, model house walkthroughs, RERA credential checks, and builder validation, ensuring absolute security for your home.</p>
+                    <a href="properties.html?type=residential" class="btn btn-primary">Browse New Launches</a>
+                </div>
+                <div class="why-us-visual reveal reveal-right" style="order: 2;">
+                    <div style="width: 100%; height: 320px; border-radius: var(--border-radius-lg); background: linear-gradient(135deg, rgba(229,178,62,0.1) 0%, rgba(20,24,34,0.6) 100%); border: var(--border-glass-gold); display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="text-align: center; padding: 30px;">
+                            <h3 style="font-size: 1.4rem; color: var(--text-gold); margin-bottom: 8px;">Gold Living Standard</h3>
+                            <p style="max-width: 280px; font-size: 0.85rem;">Luxury flats, apartments, and penthouses situated in secure communities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr style="border: 0; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+
+            <!-- Service 2: Commercial Spaces -->
+            <div class="why-us-split">
+                <div class="why-us-visual reveal reveal-left" style="order: 1;">
+                    <div style="width: 100%; height: 320px; border-radius: var(--border-radius-lg); background: linear-gradient(135deg, rgba(20,24,34,0.6) 0%, rgba(229,178,62,0.1) 100%); border: var(--border-glass-gold); display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="text-align: center; padding: 30px;">
+                            <h3 style="font-size: 1.4rem; color: var(--text-gold); margin-bottom: 8px;">High-Visibility Outlets</h3>
+                            <p style="max-width: 280px; font-size: 0.85rem;">Corner spaces, highway frontage showrooms, and double-height lobbies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-us-content reveal reveal-right" style="order: 2;">
+                    <div style="font-size: 2.2rem; color: var(--text-gold); margin-bottom: 16px;"><i class="fa-solid fa-store"></i></div>
+                    <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 16px;">Commercial Spaces & Offices</h2>
+                    <p style="margin-bottom: 16px; font-size: 1.05rem;">Scale your company brand or secure stable passive rental yields. We provide strategic consultancy for prime retail showrooms, double-height executive commercial spaces, and corporate offices.</p>
+                    <p style="margin-bottom: 24px;">Our location analysis checks highway connectivity, pedestrian traffic rates, and business demographics to find spaces that elevate your brand.</p>
+                    <a href="properties.html?type=commercial" class="btn btn-primary">Find a Showroom</a>
+                </div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+
+            <!-- Service 3: Resale Services -->
+            <div class="why-us-split">
+                <div class="why-us-content reveal reveal-left" style="order: 1;">
+                    <div style="font-size: 2.2rem; color: var(--text-gold); margin-bottom: 16px;"><i class="fa-solid fa-signature"></i></div>
+                    <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 16px;">Resale Services & Valuation</h2>
+                    <p style="margin-bottom: 16px; font-size: 1.05rem;">We offer a hand-picked portfolio of pre-owned residential and commercial properties. We focus on background screening to avoid legal title disputes.</p>
+                    <p style="margin-bottom: 24px;">Our verified process checks title deed records, pending bank loans, tax dues, and market valuations, guaranteeing a secure, transparent transaction.</p>
+                    <a href="#" class="btn btn-primary trigger-enquiry" data-property="Resale Service Inquiry">List Your Property with Us</a>
+                </div>
+                <div class="why-us-visual reveal reveal-right" style="order: 2;">
+                    <div style="width: 100%; height: 320px; border-radius: var(--border-radius-lg); background: linear-gradient(135deg, rgba(229,178,62,0.1) 0%, rgba(20,24,34,0.6) 100%); border: var(--border-glass-gold); display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="text-align: center; padding: 30px;">
+                            <h3 style="font-size: 1.4rem; color: var(--text-gold); margin-bottom: 8px;">Legally Clear Titles</h3>
+                            <p style="max-width: 280px; font-size: 0.85rem;">Zero pending litigation, clear documentation, and fair pricing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+
+            <!-- Service 4: Investment Advisory -->
+            <div class="why-us-split">
+                <div class="why-us-visual reveal reveal-left" style="order: 1;">
+                    <div style="width: 100%; height: 320px; border-radius: var(--border-radius-lg); background: linear-gradient(135deg, rgba(20,24,34,0.6) 0%, rgba(229,178,62,0.1) 100%); border: var(--border-glass-gold); display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: var(--shadow-soft);">
+                        <div style="text-align: center; padding: 30px;">
+                            <h3 style="font-size: 1.4rem; color: var(--text-gold); margin-bottom: 8px;">Capital Appreciation</h3>
+                            <p style="max-width: 280px; font-size: 0.85rem;">Data-driven growth area tracking, infrastructure reviews, and rental yields.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-us-content reveal reveal-right" style="order: 2;">
+                    <div style="font-size: 2.2rem; color: var(--text-gold); margin-bottom: 16px;"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 16px;">Real Estate Investment Advisory</h2>
+                    <p style="margin-bottom: 16px; font-size: 1.05rem;">Maximize your wealth portfolio. Our data-driven advisory uses infrastructure expansion logs, RERA updates, and rental market metrics to identify Pune's high-yield regions.</p>
+                    <p style="margin-bottom: 24px;">Avoid speculative risks. We advise on commercial property syndicates, pre-leased corporate spaces, and pre-launch capital gains profiles.</p>
+                    <a href="contact.html" class="btn btn-primary">Book a Free Consultation</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- --- Footer --- -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/logo-light.png" alt="24k Realty Footer Logo" class="footer-logo">
+                    <p>Premier real estate consultancy firm dedicated to providing gold-standard service in Pune. Dream spaces bridged to reality.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/24k_realty?igsh=dnp0ZDlnb3Juazho" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BSKggxUkM/" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Details</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Wagholi, Pune, Maharashtra 412207</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:24k.realty.1@gmail.com">24k.realty.1@gmail.com</a></li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 24k Realty. All Rights Reserved.</p>
+                <p style="font-size: 0.8rem; color: rgba(255,255,255,0.1);">Designed with 24k Gold Standard</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- --- Floating WhatsApp Widget --- -->
+    <div class="whatsapp-widget">
+        <a href="#" class="whatsapp-btn" id="whatsappWidget" aria-label="Chat with 24k Realty on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- --- Interactive Inquiry Modal Overlay --- -->
+    <div class="inquiry-modal-overlay" id="inquiryModalOverlay">
+        <div class="inquiry-modal">
+            <div class="modal-header">
+                <h3>Express Your Interest</h3>
+                <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <span id="modalSubtitle" style="display: block; font-family: var(--font-heading); font-size: 0.9rem; color: var(--text-gold); margin-bottom: 20px; text-transform: uppercase; font-weight: 600;">Enquiry for: Godrej The Gale</span>
+                
+                <form id="modalForm" style="display: flex; flex-direction: column; gap: 16px;">
+                    <input type="hidden" id="modalPropertyTitle" value="General">
+                    <div class="form-control-wrap">
+                        <input type="text" placeholder="Your Name" class="form-input" required style="width: 100%;">
+                    </div>
+                    <div class="form-control-wrap">
+                        <input type="email" placeholder="Your Email" class="form-input" required style="width: 100%;">
+                    </div>
+                    <div class="form-control-wrap">
+                        <input type="tel" placeholder="Phone Number" class="form-input" required style="width: 100%;">
+                    </div>
+                    <div class="form-control-wrap">
+                        <textarea placeholder="Write your requirements (budget, BHK size, timeline)..." class="form-textarea" required style="width: 100%; height: 100px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                </form>
+                
+                <!-- Success overlay inside modal -->
+                <div class="form-success-overlay">
+                    <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <h3>Inquiry Received!</h3>
+                    <p>Our property manager is preparing property details and brochure for you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Controller Script -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

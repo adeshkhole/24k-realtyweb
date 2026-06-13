@@ -1,0 +1,19 @@
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+Thumbs.db:encryptable
+
+# Folder config file
+Desktop.ini
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Log files
+*.log

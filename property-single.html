@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed property overview, configurations, floor plan details, and RERA number for premium projects in Pune.">
+    <meta name="author" content="24K Realty">
+    
+    <title>Property Details - 24k Realty</title>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="shortcut icon" href="assets/images/logo-light.png" type="image/png">
+</head>
+<body>
+
+    <!-- --- Header Navigation --- -->
+    <header class="site-header scrolled" id="siteHeader">
+        <div class="container">
+            <div class="header-wrap">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo-light.png" alt="24K Realty Gold Logo">
+                </a>
+                
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="properties.html">Properties</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-action">
+                    <a href="#" class="btn btn-primary trigger-enquiry" id="dynEnquiryTrigger" data-property="General" style="padding: 10px 20px; font-size: 0.8rem;">Enquire Now</a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <button class="modal-close-btn" id="drawerClose" style="position: absolute; top: 24px; right: 24px;">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="properties.html">Properties</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="#" class="btn btn-primary trigger-enquiry" data-property="General Consultation" style="margin-top: 20px;">Book Consultation</a>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- --- Inner Page Dynamic Hero Banner --- -->
+    <section class="inner-hero" style="background-image: url('assets/images/hero_bg_1.jpg'); transition: background-image 0.5s ease;">
+        <div class="container">
+            <h1 class="text-gold-gradient shimmer-text" id="dynPropertyTitle">Property Title</h1>
+            <div class="breadcrumb-path">
+                <a href="index.html">Home</a>
+                <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; align-self: center;"></i>
+                <a href="properties.html">Properties</a>
+                <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; align-self: center;"></i>
+                <span id="dynPropertyTitleHero">Property</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Property Details Content --- -->
+    <section class="section-padding" style="background-color: var(--bg-dark);">
+        <div class="container">
+            <div class="detail-grid">
+                <!-- Left Details Area -->
+                <div>
+                    <!-- Big Gallery Image -->
+                    <div class="detail-gallery reveal reveal-scale">
+                        <img src="assets/images/hero_bg_1.jpg" alt="Property Main View" id="dynGalleryImg">
+                    </div>
+                    
+                    <!-- Title & Price Block -->
+                    <div class="detail-header-strip reveal">
+                        <div>
+                            <span id="dynPropertyType" style="color: var(--text-gold); font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700; text-transform: uppercase;">Residential</span>
+                            <h2 id="dynPropertyName" style="margin-top: 4px; font-family: var(--font-serif);">Property Name</h2>
+                            <p id="dynPropertyAddress"><i class="fa-solid fa-location-dot"></i> Wagholi, Pune</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Price Guide</span>
+                            <span id="dynPropertyPrice" style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700; color: var(--text-gold);">₹85 Lakh*</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Overview Description -->
+                    <div class="detail-description reveal">
+                        <h3 class="detail-section-title">Project Overview</h3>
+                        <p id="dynPropertyDesc" style="line-height: 1.8; font-size: 1.05rem;">Project description goes here dynamically based on chosen parameters.</p>
+                    </div>
+                    
+                    <!-- Amenities -->
+                    <div class="reveal">
+                        <h3 class="detail-section-title">Key Amenities</h3>
+                        <div class="amenities-list" id="dynAmenitiesList">
+                            <!-- Populated dynamically by JS -->
+                        </div>
+                    </div>
+                    
+                    <!-- Specifications Block -->
+                    <div class="reveal" style="margin-top: 40px;">
+                        <h3 class="detail-section-title">Specifications Checklist</h3>
+                        <div class="detail-specs-table">
+                            <div class="detail-spec-box">
+                                <span>Property Category</span>
+                                <span id="dynSpecType">Residential</span>
+                            </div>
+                            <div class="detail-spec-box">
+                                <span>Configuration</span>
+                                <span id="dynSpecConfig">2 & 3 BHK</span>
+                            </div>
+                            <div class="detail-spec-box">
+                                <span>Super Built Area</span>
+                                <span id="dynSpecArea">750 - 1100 Sqft</span>
+                            </div>
+                            <div class="detail-spec-box">
+                                <span>Project Status</span>
+                                <span id="dynSpecStatus">New Launch</span>
+                            </div>
+                            <div class="detail-spec-box">
+                                <span>Price Range</span>
+                                <span id="dynSpecPrice" style="color: var(--text-gold); font-weight: 700;">Starting at ₹85 Lakh*</span>
+                            </div>
+                            <div class="detail-spec-box" style="grid-column: span 2;">
+                                <span>RERA Reg. Number</span>
+                                <span id="dynSpecRera" style="color: var(--text-gold); font-weight: 700;">Verified (Available at site)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- RERA Disclaimer -->
+                    <div class="reveal" style="margin-top: 40px; padding: 20px; background: rgba(229, 178, 62, 0.05); border: var(--border-glass-gold); border-radius: var(--border-radius-md);">
+                        <h4 style="font-size: 0.9rem; color: var(--text-gold); margin-bottom: 8px;"><i class="fa-solid fa-circle-info"></i> RERA Compliance & Pricing Disclaimer</h4>
+                        <p style="font-size: 0.8rem; line-height: 1.5;">*RERA Registration Number: <span id="dynPropertyRera">P52100052309</span>. Prices mentioned are indicative starting rates and exclude tax, stamp duty, and registration charges. Booking is subject to project availability. End-to-end legal title verification and guided inspections are fully assisted by 24K Realty.</p>
+                    </div>
+                </div>
+                
+                <!-- Right Sticky Consultation Sidebar -->
+                <div>
+                    <div class="sidebar-sticky-box glass-card reveal reveal-right">
+                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 8px;">Book a Guided Site Visit</h3>
+                        <p style="font-size: 0.85rem; margin-bottom: 24px;">Our property consultants provide end-to-end transport and paperwork assistance for site visits.</p>
+                        
+                        <form id="contactForm" style="display: flex; flex-direction: column; gap: 16px;">
+                            <div class="form-control-wrap">
+                                <input type="text" placeholder="Your Name" class="form-input" required style="width: 100%;">
+                            </div>
+                            <div class="form-control-wrap">
+                                <input type="email" placeholder="Your Email" class="form-input" required style="width: 100%;">
+                            </div>
+                            <div class="form-control-wrap">
+                                <input type="tel" placeholder="Phone Number" class="form-input" required style="width: 100%;">
+                            </div>
+                            <div class="form-control-wrap">
+                                <select class="form-input" style="background: rgba(255, 255, 255, 0.03); color: var(--text-light);" required>
+                                    <option value="" style="background: var(--bg-surface); color: var(--text-muted);">Preferred Visit Day</option>
+                                    <option value="Weekday" style="background: var(--bg-surface); color: var(--text-light);">Weekday (Mon - Fri)</option>
+                                    <option value="Saturday" style="background: var(--bg-surface); color: var(--text-light);">Saturday</option>
+                                    <option value="Sunday" style="background: var(--bg-surface); color: var(--text-light);">Sunday (By Appointment)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; height: 50px;">Schedule Site Visit</button>
+                        </form>
+                        
+                        <!-- Success overlay -->
+                        <div class="form-success-overlay">
+                            <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                            <h3>Schedule Request Sent!</h3>
+                            <p>We will call you to confirm transport and timing shortly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Footer --- -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/logo-light.png" alt="24k Realty Footer Logo" class="footer-logo">
+                    <p>Premier real estate consultancy firm dedicated to providing gold-standard service in Pune. Dream spaces bridged to reality.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/24k_realty?igsh=dnp0ZDlnb3Juazho" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BSKggxUkM/" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Details</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Wagholi, Pune, Maharashtra 412207</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:24k.realty.1@gmail.com">24k.realty.1@gmail.com</a></li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 24k Realty. All Rights Reserved.</p>
+                <p style="font-size: 0.8rem; color: rgba(255,255,255,0.1);">Designed with 24k Gold Standard</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- --- Floating WhatsApp Widget --- -->
+    <div class="whatsapp-widget">
+        <a href="#" class="whatsapp-btn" id="whatsappWidget" aria-label="Chat with 24k Realty on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- --- Interactive Inquiry Modal Overlay --- -->
+    <div class="inquiry-modal-overlay" id="inquiryModalOverlay">
+        <div class="inquiry-modal">
+            <div class="modal-header">
+                <h3>Express Your Interest</h3>
+                <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <span id="modalSubtitle" style="display: block; font-family: var(--font-heading); font-size: 0.9rem; color: var(--text-gold); margin-bottom: 20px; text-transform: uppercase; font-weight: 600;">Enquiry for: Godrej The Gale</span>
+                
+                <form id="modalForm" style="display: flex; flex-direction: column; gap: 16px;">
+                    <input type="hidden" id="modalPropertyTitle" value="General">
+                    <div class="form-control-wrap">
+                        <input type="text" placeholder="Your Name" class="form-input" required style="width: 100%;">
+                    </div>
+                    <div class="form-control-wrap">
+                        <input type="email" placeholder="Your Email" class="form-input" required style="width: 100%;">
+                    </div>
+                    <div class="form-control-wrap">
+                        <input type="tel" placeholder="Phone Number" class="form-input" required style="width: 100%;">
+                    </div>
+                    <div class="form-control-wrap">
+                        <textarea placeholder="Write your requirements (budget, BHK size, timeline)..." class="form-textarea" required style="width: 100%; height: 100px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                </form>
+                
+                <!-- Success overlay inside modal -->
+                <div class="form-success-overlay">
+                    <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <h3>Inquiry Received!</h3>
+                    <p>Our property manager is preparing property details and brochure for you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Controller Script -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

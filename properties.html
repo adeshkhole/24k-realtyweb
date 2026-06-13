@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore verified premium residential flats and high-visibility commercial spaces listed by 24k Realty in Pune.">
+    <meta name="keywords" content="24k Realty Properties, Flats for sale Wagholi, Offices Kharadi, Showrooms Pune">
+    <meta name="author" content="24K Realty">
+    
+    <title>Properties - 24k Realty</title>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="shortcut icon" href="assets/images/logo-light.png" type="image/png">
+</head>
+<body>
+
+    <!-- --- Header Navigation --- -->
+    <header class="site-header scrolled" id="siteHeader">
+        <div class="container">
+            <div class="header-wrap">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo-light.png" alt="24K Realty Gold Logo">
+                </a>
+                
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="properties.html">Properties</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-action">
+                    <a href="#" class="btn btn-primary trigger-enquiry" data-property="General Consultation" style="padding: 10px 20px; font-size: 0.8rem;">Enquire Now</a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <button class="modal-close-btn" id="drawerClose" style="position: absolute; top: 24px; right: 24px;">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="properties.html">Properties</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="#" class="btn btn-primary trigger-enquiry" data-property="General Consultation" style="margin-top: 20px;">Book Consultation</a>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- --- Inner Page Hero Banner --- -->
+    <section class="inner-hero" style="background-image: url('assets/images/hero_bg_1.jpg');">
+        <div class="container">
+            <h1 class="text-gold-gradient shimmer-text">Properties Catalog</h1>
+            <div class="breadcrumb-path">
+                <a href="index.html">Home</a>
+                <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; align-self: center;"></i>
+                <span>Properties</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Properties Listings & Filters Section --- -->
+    <section class="section-padding" style="background-color: var(--bg-dark);">
+        <div class="container">
+            <!-- Filter Tabs -->
+            <div class="property-tabs">
+                <button class="tab-btn active" data-filter="all">All Properties</button>
+                <button class="tab-btn" data-filter="residential">Residential Flats</button>
+                <button class="tab-btn" data-filter="commercial">Commercial Spaces</button>
+            </div>
+            
+            <!-- Grid Container -->
+            <div class="properties-grid reveal-stagger" id="propertiesCatalogGrid">
+                <!-- Card 1: Godrej The Gale -->
+                <div class="property-card property-grid-card" data-type="residential" data-location="Kharadi">
+                    <div class="property-image-wrap">
+                        <img src="assets/images/godrej-gale-banner.jpg" alt="Godrej The Gale">
+                        <div class="property-badge badge-launch">New Launch</div>
+                        <a href="property-single.html?project=godrej-the-gale" class="btn btn-primary property-details-btn" style="padding: 8px 16px; font-size: 0.75rem;">View Details</a>
+                    </div>
+                    <div class="property-content-block">
+                        <div class="property-price">₹85 Lakh* <span style="font-size: 0.8rem; font-weight: 400; color: var(--text-muted);">onwards</span></div>
+                        <h3 class="property-title">Godrej The Gale</h3>
+                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Kharadi, Pune</div>
+                        <p style="font-size: 0.85rem; margin-bottom: 16px;">Premium resort-lifestyle apartments with luxury amenities and IT park proximity.</p>
+                        <div class="property-specs-strip">
+                            <div class="spec-item"><i class="fa-solid fa-bed"></i> <span>2 & 3 BHK</span></div>
+                            <div class="spec-item"><i class="fa-solid fa-expand"></i> <span>750-1100 sqft</span></div>
+                        </div>
+                        <div style="margin-top: 20px; display: flex; gap: 10px;">
+                            <a href="#" class="btn btn-primary trigger-enquiry" data-property="Godrej The Gale" style="flex: 1; padding: 10px; font-size: 0.8rem;">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2: Millennium Falcon -->
+                <div class="property-card property-grid-card" data-type="residential" data-location="Wagholi">
+                    <div class="property-image-wrap">
+                        <img src="assets/images/millennium-falcon-banner.jpg" alt="Millennium Falcon">
+                        <div class="property-badge badge-launch">Luxury Project</div>
+                        <a href="property-single.html?project=millennium-falcon" class="btn btn-primary property-details-btn" style="padding: 8px 16px; font-size: 0.75rem;">View Details</a>
+                    </div>
+                    <div class="property-content-block">
+                        <div class="property-price">₹92 Lakh* <span style="font-size: 0.8rem; font-weight: 400; color: var(--text-muted);">onwards</span></div>
+                        <h3 class="property-title">Millennium Falcon</h3>
+                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Wagholi, Pune</div>
+                        <p style="font-size: 0.85rem; margin-bottom: 16px;">Ultra-spacious residential apartments with large deck terraces and luxury finishes.</p>
+                        <div class="property-specs-strip">
+                            <div class="spec-item"><i class="fa-solid fa-bed"></i> <span>3 & 4 BHK</span></div>
+                            <div class="spec-item"><i class="fa-solid fa-expand"></i> <span>1250-1800 sqft</span></div>
+                        </div>
+                        <div style="margin-top: 20px; display: flex; gap: 10px;">
+                            <a href="#" class="btn btn-primary trigger-enquiry" data-property="Millennium Falcon" style="flex: 1; padding: 10px; font-size: 0.8rem;">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3: Prime Commercial Plaza -->
+                <div class="property-card property-grid-card" data-type="commercial" data-location="Wagholi">
+                    <div class="property-image-wrap">
+                        <img src="assets/images/commercial-plaza-banner.jpg" alt="Commercial Plaza">
+                        <div class="property-badge badge-commercial">Commercial</div>
+                        <a href="property-single.html?project=prime-commercial-plaza" class="btn btn-primary property-details-btn" style="padding: 8px 16px; font-size: 0.75rem;">View Details</a>
+                    </div>
+                    <div class="property-content-block">
+                        <div class="property-price">₹1.5 Cr* <span style="font-size: 0.8rem; font-weight: 400; color: var(--text-muted);">onwards</span></div>
+                        <h3 class="property-title">Prime Commercial Plaza</h3>
+                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Kharadi-Wagholi, Pune</div>
+                        <p style="font-size: 0.85rem; margin-bottom: 16px;">High-visibility retail showrooms and modern office suites along highway stretch.</p>
+                        <div class="property-specs-strip">
+                            <div class="spec-item"><i class="fa-solid fa-shop"></i> <span>Showrooms/Offices</span></div>
+                            <div class="spec-item"><i class="fa-solid fa-expand"></i> <span>450-2500 sqft</span></div>
+                        </div>
+                        <div style="margin-top: 20px; display: flex; gap: 10px;">
+                            <a href="#" class="btn btn-primary trigger-enquiry" data-property="Prime Commercial Plaza" style="flex: 1; padding: 10px; font-size: 0.8rem;">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 4: Obsidian Business Park -->
+                <div class="property-card property-grid-card" data-type="commercial" data-location="Kharadi">
+                    <div class="property-image-wrap">
+                        <img src="assets/images/obsidian-park-banner.jpg" alt="Obsidian Business Park">
+                        <div class="property-badge badge-commercial">Office Space</div>
+                        <a href="property-single.html?project=obsidian-business-park" class="btn btn-primary property-details-btn" style="padding: 8px 16px; font-size: 0.75rem;">View Details</a>
+                    </div>
+                    <div class="property-content-block">
+                        <div class="property-price">₹1.2 Cr* <span style="font-size: 0.8rem; font-weight: 400; color: var(--text-muted);">onwards</span></div>
+                        <h3 class="property-title">Obsidian Business Park</h3>
+                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Kharadi IT Zone, Pune</div>
+                        <p style="font-size: 0.85rem; margin-bottom: 16px;">Futuristic corporate suites and glass boardrooms inside IT business park.</p>
+                        <div class="property-specs-strip">
+                            <div class="spec-item"><i class="fa-solid fa-building"></i> <span>Executive Offices</span></div>
+                            <div class="spec-item"><i class="fa-solid fa-expand"></i> <span>800-3200 sqft</span></div>
+                        </div>
+                        <div style="margin-top: 20px; display: flex; gap: 10px;">
+                            <a href="#" class="btn btn-primary trigger-enquiry" data-property="Obsidian Business Park" style="flex: 1; padding: 10px; font-size: 0.8rem;">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Footer --- -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/logo-light.png" alt="24k Realty Footer Logo" class="footer-logo">
+                    <p>Premier real estate consultancy firm dedicated to providing gold-standard service in Pune. Dream spaces bridged to reality.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/24k_realty?igsh=dnp0ZDlnb3Juazho" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BSKggxUkM/" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Details</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Wagholi, Pune, Maharashtra 412207</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:24k.realty.1@gmail.com">24k.realty.1@gmail.com</a></li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 24k Realty. All Rights Reserved.</p>
+                <p style="font-size: 0.8rem; color: rgba(255,255,255,0.1);">Designed with 24k Gold Standard</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- --- Floating WhatsApp Widget --- -->
+    <div class="whatsapp-widget">
+        <a href="#" class="whatsapp-btn" id="whatsappWidget" aria-label="Chat with 24k Realty on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- --- Interactive Inquiry Modal Overlay --- -->
+    <div class="inquiry-modal-overlay" id="inquiryModalOverlay">
+        <div class="inquiry-modal">
+            <div class="modal-header">
+                <h3>Express Your Interest</h3>
+                <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <span id="modalSubtitle" style="display: block; font-family: var(--font-heading); font-size: 0.9rem; color: var(--text-gold); margin-bottom: 20px; text-transform: uppercase; font-weight: 600;">Enquiry for: Godrej The Gale</span>
+                
+                <form id="modalForm" style="display: flex; flex-direction: column; gap: 16px;">
+                    <input type="hidden" id="modalPropertyTitle" value="General">
+                    <div class="form-control-wrap">
+                        <input type="text" placeholder="Your Name" class="form-input" required style="width: 100%;">
+                    </div>
+                    <div class="form-control-wrap">
+                        <input type="email" placeholder="Your Email" class="form-input" required style="width: 100%;">
+                    </div>
+                    <div class="form-control-wrap">
+                        <input type="tel" placeholder="Phone Number" class="form-input" required style="width: 100%;">
+                    </div>
+                    <div class="form-control-wrap">
+                        <textarea placeholder="Write your requirements (budget, BHK size, timeline)..." class="form-textarea" required style="width: 100%; height: 100px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                </form>
+                
+                <!-- Success overlay inside modal -->
+                <div class="form-success-overlay">
+                    <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <h3>Inquiry Received!</h3>
+                    <p>Our property manager is preparing property details and brochure for you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Controller Script -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
