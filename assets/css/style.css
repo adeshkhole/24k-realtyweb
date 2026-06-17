@@ -1410,6 +1410,20 @@ header.site-header nav.desktop-nav li.active a::after {
         padding: 60px 0;
     }
     
+    .hero-slide {
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-color: var(--bg-dark);
+        align-items: flex-end;
+        padding-bottom: 80px;
+    }
+    
+    .hero-content-wrap {
+        margin-top: 48vw;
+        padding-top: 0;
+    }
+    
     .hero-content-wrap h1 {
         font-size: 2rem;
     }
