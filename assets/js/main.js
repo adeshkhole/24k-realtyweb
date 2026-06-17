@@ -157,7 +157,7 @@ function initWhatsAppWidget() {
     const waWidget = document.getElementById("whatsappWidget");
     if (!waWidget) return;
 
-    const phoneNumber = "919876543210"; // Custom WhatsApp Number
+    const phoneNumber = "917218372145"; // Custom WhatsApp Number
     const message = "Hi 24K Realty, I am interested in booking a consultation for your premium residential/commercial spaces. Please guide me.";
 
     waWidget.addEventListener("click", (e) => {
@@ -394,35 +394,35 @@ function initPropertyFilters() {
 const propertiesDatabase = {
     "godrej-the-gale": {
         title: "Godrej The Gale",
-        location: "Kharadi, Pune",
+        location: "Hinjewadi, Pune",
         price: "Starting at ₹85 Lakh*",
         rera: "P52100052309 (Available at site)",
         type: "Residential Flat / Apartment",
         configurations: "2 & 3 BHK Premium Residences",
         area: "750 - 1100 Sq. Ft.",
         status: "New Launch (Site visits available)",
-        description: "Godrej The Gale brings a modern resort-lifestyle design to Kharadi, one of Pune's fastest-growing IT and residential hotspots. Featuring pristine green reserves, premium structural designs, and state-of-the-art health clubs, every apartment guarantees gold-standard living and structural safety. Benefit from end-to-end guidance and verified legal titles with 24K Realty.",
+        description: "Godrej The Gale brings a modern resort-lifestyle design to Hinjewadi, one of Pune's fastest-growing IT and residential hotspots. Featuring pristine green reserves, premium structural designs, and state-of-the-art health clubs, every apartment guarantees gold-standard living and structural safety. Benefit from end-to-end guidance and verified legal titles with 24K Realty.",
         amenities: ["Rooftop Infinity Pool", "24/7 Smart Security", "Premium Clubhouse", "Landscaped Gardens", "Co-working Space", "Indoor Games Area"],
         image: "assets/images/godrej-gale-banner.jpg",
         fallbackImg: "assets/images/hero_bg_1.jpg"
     },
-    "millennium-falcon": {
-        title: "Millennium Falcon",
-        location: "Wagholi, Pune",
+    "vtp-skylight": {
+        title: "VTP Skylight",
+        location: "Baner Annex, Pune",
         price: "Starting at ₹92 Lakh*",
         rera: "P52100048123 (Verified Project)",
         type: "Luxury Residential Complex",
         configurations: "3 & 4 BHK Luxury Apartments",
         area: "1250 - 1800 Sq. Ft.",
         status: "Under Construction",
-        description: "Millennium Falcon represents the peak of high-rise luxury flat design in Wagholi. Featuring large panoramic deck terraces, high-end marble bath finishes, automated lighting controls, and visual luxury themes, it provides the perfect escape from the city hustle. Invest with 24K Realty for exclusive booking rates and assured site visits.",
+        description: "VTP Skylight represents the peak of high-rise luxury flat design in Baner Annex. Featuring large panoramic deck terraces, high-end marble bath finishes, automated lighting controls, and visual luxury themes, it provides the perfect escape from the city hustle. Invest with 24K Realty for exclusive booking rates and assured site visits.",
         amenities: ["Panoramic Private Decks", "Home Automation", "Olympic-size Pool", "Exclusive Health Spa", "Private Mini Theatre", "Jogging Tracks"],
         image: "assets/images/millennium-falcon-banner.jpg",
         fallbackImg: "assets/images/hero_bg_2.jpg"
     },
     "prime-commercial-plaza": {
         title: "Prime Commercial Plaza",
-        location: "Kharadi-Wagholi Road, Pune",
+        location: "Baner, Pune",
         price: "Starting at ₹1.5 Cr*",
         rera: "P52100034988 (RERA Approved)",
         type: "Premium Commercial Spaces",
