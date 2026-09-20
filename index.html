@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="24k Realty is Pune's premier real estate consultancy, offering premium flats and commercial spaces in Baner, Hinjewadi, and nearby. Setting the gold standard.">
-    <meta name="keywords" content="24k Realty, Real Estate Pune, Flats in Baner, Commercial Showrooms Baner, Godrej The Gale, VTP Skylight">
+    <meta name="description" content="24K Realty is Pune's premier real estate consultancy, offering 100% RERA-verified luxury flats and commercial spaces across Baner, Hinjewadi, Kharadi, and Balewadi. Setting the gold standard.">
+    <meta name="keywords" content="24K Realty, Real Estate Pune, Luxury Flats Baner, Commercial Showrooms Hinjewadi, Godrej The Gale, VTP Skylight, Pune PropTech">
     <meta name="author" content="24K Realty">
     
-    <!-- Open Graph / Facebook / WhatsApp -->
+    <!-- Open Graph / WhatsApp / Social Preview -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.24krealty.in/">
-    <meta property="og:title" content="24k Realty - Setting the Gold Standard in Real Estate">
-    <meta property="og:description" content="24k Realty is Pune's premier real estate consultancy, offering premium flats and commercial spaces in Baner, Hinjewadi, and nearby. Setting the gold standard.">
-    <meta property="og:image" content="https://www.24krealty.in/assets/images/logo-light.png">
+    <meta property="og:title" content="24K Realty - Pune's Premier Real Estate & Investment Advisory">
+    <meta property="og:description" content="Setting the gold standard in Pune real estate. Explore 100% verified residential and commercial spaces with zero brokerage on new launches.">
+    <meta property="og:image" content="assets/images/logo-light.png">
     
-    <title>24k Realty - Setting the Gold Standard in Real Estate</title>
+    <title>24K Realty | Pune's Premier Real Estate & Investment Advisory</title>
     
-    <!-- FontAwesome Icons -->
+    <!-- FontAwesome 6 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Custom Style Sheet -->
+    <!-- Light Luxury Enterprise Style Sheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     
     <link rel="shortcut icon" href="assets/images/logo-light.png" type="image/png">
@@ -30,26 +30,39 @@
     <header class="site-header" id="siteHeader">
         <div class="container">
             <div class="header-wrap">
-                <!-- Brand Logo -->
-                <a href="index.html" class="logo">
-                    <img src="assets/images/logo-light.png" alt="24K Realty Gold Logo">
+                <!-- Brand Logo (Clean URL to root) -->
+                <a href="./" class="logo" aria-label="24K Realty Home">
+                    <img src="assets/images/logo-light.png" alt="24K Realty Gold Standard Logo">
                 </a>
                 
-                <!-- Desktop Menu -->
-                <nav class="desktop-nav">
+                <!-- Desktop Navigation Menu (Clean Directory Routing) -->
+                <nav class="desktop-nav" aria-label="Primary Navigation">
                     <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="properties.html">Properties</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li class="active"><a href="./">Home</a></li>
+                        <li><a href="properties/">Properties</a></li>
+                        <li><a href="services/">Services</a></li>
+                        <li><a href="about/">About</a></li>
+                        <li><a href="contact/">Contact Us</a></li>
                     </ul>
                 </nav>
                 
-                <!-- CTA Header Button & Hamburger -->
+                <!-- Header Actions -->
                 <div class="header-action">
-                    <a href="#" class="btn btn-primary trigger-enquiry" data-property="General Consultation" style="padding: 10px 20px; font-size: 0.8rem;">Enquire Now</a>
-                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                    <!-- NRI Multi-Currency Switcher -->
+                    <div class="currency-switcher" aria-label="Select Currency">
+                        <button class="currency-btn active" data-currency="INR">₹ INR</button>
+                        <button class="currency-btn" data-currency="USD">$ USD</button>
+                        <button class="currency-btn" data-currency="AED">AED</button>
+                    </div>
+
+                    <a href="tel:+917218372145" class="header-phone-chip" aria-label="Call 24K Realty">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 72183 72145</span>
+                    </a>
+                    <a href="#contact" class="btn btn-primary trigger-enquiry" data-property="VIP Consultation">
+                        <i class="fa-regular fa-calendar-check"></i> Schedule VIP Visit
+                    </a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -61,418 +74,744 @@
 
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav-drawer" id="mobileDrawer">
-        <button class="modal-close-btn" id="drawerClose" style="position: absolute; top: 24px; right: 24px;">&times;</button>
+        <button class="modal-close-btn" id="drawerClose" aria-label="Close Mobile Menu">&times;</button>
+        
+        <!-- Mobile Currency Switcher -->
+        <div style="margin-top: 10px;">
+            <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 6px;">Select Currency:</span>
+            <div class="currency-switcher" style="width: 100%; justify-content: space-around;" aria-label="Select Currency">
+                <button class="currency-btn active" data-currency="INR">₹ INR</button>
+                <button class="currency-btn" data-currency="USD">$ USD</button>
+                <button class="currency-btn" data-currency="AED">AED</button>
+            </div>
+        </div>
+
         <ul>
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="properties.html">Properties</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li class="active"><a href="./">Home</a></li>
+            <li><a href="properties/">Properties</a></li>
+            <li><a href="services/">Services</a></li>
+            <li><a href="about/">About</a></li>
+            <li><a href="contact/">Contact Us</a></li>
         </ul>
-        <a href="#" class="btn btn-primary trigger-enquiry" data-property="General Consultation" style="margin-top: 20px;">Book Consultation</a>
+        <a href="tel:+917218372145" class="btn btn-secondary" style="width: 100%; justify-content: center;">
+            <i class="fa-solid fa-phone"></i> +91 72183 72145
+        </a>
+        <a href="#contact" class="btn btn-primary trigger-enquiry" data-property="Mobile Menu VIP Consultation" style="width: 100%; justify-content: center;">
+            Book VIP Consultation
+        </a>
     </div>
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <!-- --- Hero Banner Section --- -->
-    <section class="hero-slider">
-        <!-- Slide 1 -->
-        <div class="hero-slide active" style="background-image: url('assets/images/hero_bg_1.jpg');">
-            <div class="container">
-                <div class="hero-content-wrap">
-                    <h1 class="text-gold-gradient">24k Realty: Setting the Gold Standard in Real Estate.</h1>
-                    <p>We specialize in bridging the gap between dream spaces and reality, offering expert guidance across residential and commercial sectors in Pune.</p>
-                    <div class="hero-ctas">
-                        <a href="properties.html" class="btn btn-primary">Browse New Launches</a>
-                        <a href="contact.html" class="btn btn-secondary">Book Site Visit</a>
-                    </div>
+    <!-- --- Modern Light Luxury Hero Banner --- -->
+    <section class="hero-light-banner">
+        <div class="container">
+            <div class="hero-content-wrap reveal">
+                <div class="hero-tagline-pill">
+                    <i class="fa-solid fa-crown"></i>
+                    <span>Pune's Premier Gold-Standard Property Advisory</span>
                 </div>
-            </div>
-        </div>
-        
-        <!-- Slide 2 -->
-        <div class="hero-slide" style="background-image: url('assets/images/hero_bg_2.jpg');">
-            <div class="container">
-                <div class="hero-content-wrap">
-                    <h1 class="text-gold-gradient">Your Vision. Our Expertise. Real Estate Excellence.</h1>
-                    <p>Whether you are looking for a modern lifestyle or a strategic business location, we ensure every transaction is transparent, efficient, and rewarding.</p>
-                    <div class="hero-ctas">
-                        <a href="properties.html?type=commercial" class="btn btn-primary">Find a Showroom</a>
-                        <a href="services.html" class="btn btn-secondary">Our Expertise</a>
-                    </div>
+                
+                <h1>
+                    Architecting Your Future in <br>
+                    <span class="text-gold-gradient">Pune Luxury Real Estate</span>.
+                </h1>
+                
+                <p>
+                    Data-driven advisory, 100% RERA-verified luxury apartments, and prime commercial investments across Baner, Hinjewadi, Kharadi, and Balewadi. Zero brokerage on all new developer launches.
+                </p>
+                
+                <div class="hero-ctas">
+                    <a href="properties/" class="btn btn-primary">
+                        <i class="fa-solid fa-building-circle-check"></i> Explore Prime Launches
+                    </a>
+                    <a href="#contact" class="btn btn-secondary trigger-enquiry" data-property="Chauffeur Site Tour">
+                        <i class="fa-solid fa-car"></i> Book VIP Site Tour
+                    </a>
                 </div>
-            </div>
-        </div>
-        
-        <!-- Slide 3 -->
-        <div class="hero-slide" style="background-image: url('assets/images/hero_bg_3.jpg');">
-            <div class="container">
-                <div class="hero-content-wrap">
-                    <h1 class="text-gold-gradient">Invest in Quality. Invest with 24k Realty.</h1>
-                    <p>Data-driven insights to help you identify high-growth areas in Pune for long-term real estate appreciation and maximum rental yields.</p>
-                    <div class="hero-ctas">
-                        <a href="contact.html" class="btn btn-primary">Book Free Consultation</a>
-                        <a href="properties.html" class="btn btn-secondary">List Your Property</a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Slider Navigation Arrows -->
-        <div class="hero-controls">
-            <div class="hero-arrow" id="heroPrev"><i class="fa-solid fa-arrow-left"></i></div>
-            <div class="hero-arrow" id="heroNext"><i class="fa-solid fa-arrow-right"></i></div>
+                <!-- Trust Metrics Ribbon -->
+                <div class="hero-trust-badges">
+                    <div class="trust-badge-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>100% Verified RERA Titles</span>
+                    </div>
+                    <div class="trust-badge-item">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                        <span>0% Brokerage on Launches</span>
+                    </div>
+                    <div class="trust-badge-item">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>₹500+ Cr Advisory Portfolio</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- --- Quick Filter Search Box --- -->
-    <section class="container search-filter-panel">
-        <div class="glass-card reveal reveal-scale" style="padding: 24px 32px;">
-            <div class="filter-grid">
-                <div class="filter-group">
-                    <label for="searchType">Property Type</label>
-                    <select class="filter-select" id="searchType">
-                        <option value="all">All Properties</option>
-                        <option value="residential">Residential Flats</option>
-                        <option value="commercial">Commercial Showrooms/Offices</option>
-                        <option value="resale">Resale Properties</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="searchLocation">Location Area</label>
-                    <select class="filter-select" id="searchLocation">
-                        <option value="">Select Location</option>
-                        <option value="Hinjewadi">Hinjewadi, Pune</option>
-                        <option value="Baner">Baner, Pune</option>
-                        <option value="Kharadi">Kharadi, Pune</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="searchBudget">Max Budget</label>
-                    <select class="filter-select" id="searchBudget">
-                        <option value="">Any Price</option>
-                        <option value="80">Under ₹80 Lakh</option>
-                        <option value="100">Under ₹1.2 Cr</option>
-                        <option value="200">Above ₹1.5 Cr</option>
-                    </select>
-                </div>
-                <button class="btn btn-primary" id="filterSearchBtn" style="width: 100%; height: 50px;">
-                    <i class="fa-solid fa-magnifying-glass" style="margin-right: 8px;"></i> Search
+    <!-- --- Enterprise PropTech Search Console (SAP Style) --- -->
+    <div class="container proptech-search-container">
+        <div class="proptech-search-card reveal reveal-scale">
+            <!-- Search Categories -->
+            <div class="search-category-tabs">
+                <button class="search-tab-btn active" data-category="all">
+                    <i class="fa-solid fa-border-all"></i> All Projects
                 </button>
+                <button class="search-tab-btn" data-category="residential">
+                    <i class="fa-solid fa-house-chimney"></i> Luxury Residences
+                </button>
+                <button class="search-tab-btn" data-category="commercial">
+                    <i class="fa-solid fa-briefcase"></i> Commercial & Showrooms
+                </button>
+                <button class="search-tab-btn" data-category="investment">
+                    <i class="fa-solid fa-arrow-trend-up"></i> High-Yield Investment
+                </button>
+                <button class="search-tab-btn" data-category="resale">
+                    <i class="fa-solid fa-repeat"></i> Verified Resale
+                </button>
+            </div>
+
+            <!-- Filters Grid -->
+            <div class="proptech-filter-grid">
+                <div class="filter-input-wrap">
+                    <label for="searchType"><i class="fa-solid fa-filter"></i> Category</label>
+                    <select class="proptech-select" id="searchType">
+                        <option value="all">All Property Categories</option>
+                        <option value="residential">2 & 3 BHK Luxury Residences</option>
+                        <option value="residential">3 & 4 BHK Panoramic Penthouses</option>
+                        <option value="commercial">Grade-A Corporate Offices</option>
+                        <option value="commercial">High-Visibility Showrooms</option>
+                        <option value="resale">Verified Resale Properties</option>
+                    </select>
+                </div>
+
+                <div class="filter-input-wrap">
+                    <label for="searchLocation"><i class="fa-solid fa-location-dot"></i> Micro-Market (Pune)</label>
+                    <select class="proptech-select" id="searchLocation">
+                        <option value="">All Prime Pune Localities</option>
+                        <option value="Baner">Baner (Expressway & High Street)</option>
+                        <option value="Hinjewadi">Hinjewadi (IT Park Phase 1-3)</option>
+                        <option value="Kharadi">Kharadi (World Trade Center & EON)</option>
+                        <option value="Balewadi">Balewadi High Street</option>
+                        <option value="Wakad">Wakad (Gateway Corridors)</option>
+                    </select>
+                </div>
+
+                <div class="filter-input-wrap">
+                    <label for="searchBudget"><i class="fa-solid fa-indian-rupee-sign"></i> Budget Range</label>
+                    <select class="proptech-select" id="searchBudget">
+                        <option value="">Any Investment Bracket</option>
+                        <option value="80">Under ₹80 Lakh</option>
+                        <option value="120">₹80 Lakh – ₹1.5 Crore</option>
+                        <option value="250">₹1.5 Crore – ₹3.0 Crore</option>
+                        <option value="500">₹3.0 Crore+ Ultra Luxury</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary" id="filterSearchBtn" style="height: 48px;">
+                    <i class="fa-solid fa-magnifying-glass"></i> Search
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- Developer Partners Marquee Ticker --- -->
+    <section class="partners-section">
+        <div class="container">
+            <div class="partners-title">Authorized Direct Channel Partner For Pune's Leading Builders</div>
+        </div>
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> Godrej Properties</div>
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> VTP Realty</div>
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> Panchshil Realty</div>
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> Lodha Group</div>
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> Kolte-Patil Developers</div>
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> Pride World City</div>
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> Gera Developments</div>
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> Rohan Builders</div>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> Godrej Properties</div>
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> VTP Realty</div>
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> Panchshil Realty</div>
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> Lodha Group</div>
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> Kolte-Patil Developers</div>
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> Pride World City</div>
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> Gera Developments</div>
+                <div class="partner-logo-pill"><i class="fa-solid fa-award"></i> Rohan Builders</div>
             </div>
         </div>
     </section>
 
     <!-- --- Executive Summary Section --- -->
-    <section class="section-padding" style="background-color: var(--bg-dark);">
+    <section class="section-padding" style="background-color: #FFFFFF;">
         <div class="container">
-            <div class="why-us-split">
-                <div class="why-us-content reveal reveal-left" style="order: 1;">
-                    <span style="color: var(--text-gold); font-family: var(--font-heading); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 12px;">Executive Summary</span>
-                    <h2 class="shimmer-text" style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 24px; font-weight: 600;">Bridging the Gap Between Dream Spaces and Reality.</h2>
-                    <p style="margin-bottom: 24px; font-size: 1.05rem; line-height: 1.8;">24k Realty is a premier real estate consultancy firm dedicated to providing gold-standard service in the property market. Whether you are looking for a modern lifestyle home or a strategic high-visibility business location, we ensure every transaction is transparent, efficient, and rewarding.</p>
-                    <p style="margin-bottom: 32px;">From initial site visits to final verified documentation, our expert consultants manage the heavy lifting so you don't have to. Experience the "24k standard" of service and reliability.</p>
-                    <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
-                </div>
-                
-                <div class="why-us-visual reveal reveal-right" style="order: 2;">
-                    <!-- Elegant Dark-Gold Aesthetic Image Frame -->
-                    <div style="width: 100%; height: 420px; border-radius: var(--border-radius-lg); background: linear-gradient(135deg, rgba(229, 178, 62, 0.15) 0%, rgba(7, 9, 12, 0.9) 100%); border: var(--border-glass-gold); display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: var(--shadow-soft);">
-                        <div style="text-align: center; padding: 40px;">
-                            <img src="assets/images/logo-light.png" alt="24K Logo Symbol" style="height: 120px; width: auto; margin-bottom: 24px;" loading="lazy">
-                            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 12px;">The 24K Standard</h3>
-                            <p style="max-width: 320px; margin: 0 auto; font-size: 0.9rem;">Excellence, Integrity, and Personalized Solutions for Every Client.</p>
-                        </div>
+            <div class="contact-section-split" style="align-items: center;">
+                <div class="reveal reveal-left">
+                    <div class="hero-tagline-pill">
+                        <i class="fa-solid fa-certificate"></i> The 24K Philosophy
                     </div>
-                    
-                    <div class="glass-card stats-card-overlay" style="background: rgba(20, 24, 34, 0.95);">
-                        <span class="stats-num stat-counter">100%</span>
-                        <span class="stats-text">Verified Listings</span>
+                    <h2 style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2;">
+                        Bridging The Gap Between Dream Spaces and Reality.
+                    </h2>
+                    <p style="font-size: 1.05rem; margin-bottom: 20px;">
+                        24K Realty is Pune’s premier real estate consultancy firm dedicated to delivering a gold-standard client experience. From identifying prime high-growth micro-markets to securing the best pre-launch pricing, our certified consultants remove all ambiguity from property transactions.
+                    </p>
+                    <p style="margin-bottom: 30px;">
+                        Whether you are acquiring a signature family home or expanding your commercial portfolio, we provide end-to-end support including guided VIP site tours, legal due diligence, title verification, and doorstep loan processing.
+                    </p>
+                    <div style="display: flex; gap: 16px;">
+                        <a href="about/" class="btn btn-secondary">
+                            <i class="fa-solid fa-circle-info"></i> Discover Our Story
+                        </a>
+                        <a href="#contact" class="btn btn-primary trigger-enquiry" data-property="Executive Advisory">
+                            <i class="fa-solid fa-user-tie"></i> Speak to Senior Advisor
+                        </a>
+                    </div>
+                </div>
+
+                <div class="reveal reveal-right" style="position: relative;">
+                    <div class="glass-card" style="padding: 0; overflow: hidden; border-radius: var(--border-radius-xl);">
+                        <img src="assets/images/penthouse_daylight.jpg" alt="24K Luxury Penthouse Living" style="width: 100%; height: 420px; object-fit: cover;">
+                        <div style="padding: 24px; background: #FFFFFF;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <h4 style="font-size: 1.15rem; margin-bottom: 4px;">The 24K Standard of Trust</h4>
+                                    <p style="font-size: 0.85rem; margin: 0;">Verified Credentials & Absolute Transparency</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span class="stat-counter" style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--text-gold-dark);">100%</span>
+                                    <span style="display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Legal Title Check</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- --- Our Expertise (Working Profile) --- -->
+    <!-- --- Pune Prime Micro-Market Explorer (PropTech / SAP Style Tool) --- -->
     <section class="section-padding" style="background-color: var(--bg-surface);">
         <div class="container">
             <div class="section-title-wrap reveal">
-                <span class="subtitle">Our Expertise</span>
-                <h2 class="shimmer-text">Comprehensive Property Solutions</h2>
+                <span class="subtitle">PropTech Market Intelligence</span>
+                <h2>Pune Prime Micro-Market Explorer</h2>
+                <p>Interactive real-time insights, price trends, and rental yields across Pune’s highest-performing real estate corridors.</p>
             </div>
-            
-            <div class="expertise-grid reveal-stagger">
-                <!-- Card 1 -->
-                <div class="glass-card expertise-card">
-                    <div class="expertise-icon-wrap">
-                        <i class="fa-solid fa-house-chimney fa-2x"></i>
+
+            <!-- Market Selector Tabs (Swipeable on Mobile) -->
+            <div class="market-tabs-wrapper reveal">
+                <button class="market-tab-pill active" data-market="baner">
+                    <i class="fa-solid fa-city"></i> Baner
+                </button>
+                <button class="market-tab-pill" data-market="hinjewadi">
+                    <i class="fa-solid fa-laptop-code"></i> Hinjewadi IT Zone
+                </button>
+                <button class="market-tab-pill" data-market="kharadi">
+                    <i class="fa-solid fa-building"></i> Kharadi (WTC Corridor)
+                </button>
+                <button class="market-tab-pill" data-market="balewadi">
+                    <i class="fa-solid fa-utensils"></i> Balewadi High Street
+                </button>
+                <button class="market-tab-pill" data-market="wakad">
+                    <i class="fa-solid fa-route"></i> Wakad Expressway
+                </button>
+            </div>
+
+            <!-- Dynamic Market Data Card -->
+            <div class="market-data-card tilt-card reveal">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                        <span class="property-badge badge-launch" style="position: static;">Pune Growth Hub</span>
+                        <span style="font-size: 0.85rem; font-weight: 600; color: var(--emerald-green);"><i class="fa-solid fa-circle-check"></i> High Investor Demand</span>
                     </div>
-                    <h3>Residential New Launches</h3>
-                    <p>Exclusive access to the latest premium flat and apartment projects in Pune with end-to-end site visit assistance.</p>
-                    <a href="services.html" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                    <h3 id="marketAreaName" style="font-size: 2rem; margin-bottom: 6px; font-family: var(--font-serif);">Baner</h3>
+                    <p id="marketAreaTag" style="font-size: 1rem; color: #475569; font-weight: 500; margin-bottom: 24px;">Pune's High-Growth Western Luxury & Commercial Corridor</p>
+
+                    <!-- Stats Row -->
+                    <div class="market-stats-row">
+                        <div class="market-stat-box">
+                            <span class="stat-label">Avg. Capital Price</span>
+                            <span class="stat-val" id="marketAvgPrice">₹9,400 / sq.ft.</span>
+                        </div>
+                        <div class="market-stat-box">
+                            <span class="stat-label">Rental Yield</span>
+                            <span class="stat-val" id="marketRentalYield" style="color: var(--emerald-green);">4.8% p.a.</span>
+                        </div>
+                        <div class="market-stat-box">
+                            <span class="stat-label">3-Yr Capital Growth</span>
+                            <span class="stat-val" id="marketGrowthRate">+15.2%</span>
+                        </div>
+                    </div>
+
+                    <!-- Key Infrastructure Highlights -->
+                    <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 12px;">Strategic Highlights & Connectivity</h4>
+                    <ul class="market-features-list" id="marketFeaturesList">
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Proximity to Hinjewadi IT Park and Mumbai-Pune Expressway</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Upcoming Pune Metro Line 3 station within 5 minutes</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>High-end social infra: Balewadi High Street, top international schools & hospitals</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Strong appreciation for 3 & 4 BHK luxury residences</span></li>
+                    </ul>
+
+                    <div style="margin-top: 30px;">
+                        <a href="properties/?location=Baner" class="btn btn-primary" id="marketCtaBtn">
+                            Explore Properties in Baner <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                    </div>
                 </div>
-                
-                <!-- Card 2 -->
-                <div class="glass-card expertise-card">
-                    <div class="expertise-icon-wrap">
-                        <i class="fa-solid fa-building-user fa-2x"></i>
+
+                <!-- Market Visual Showcase -->
+                <div class="market-visual-box">
+                    <img src="assets/images/millennium-falcon-banner.jpg" alt="Pune Real Estate Corridor" id="marketVisualImg">
+                    <div class="market-visual-overlay">
+                        <h4 id="marketVisualTitle">Baner Real Estate Outlook</h4>
+                        <p>Curated luxury towers with panoramic city views and premium lifestyle amenities.</p>
                     </div>
-                    <h3>Commercial Spaces</h3>
-                    <p>Strategic consultancy for high-visibility showrooms and modern office spaces to elevate your business presence.</p>
-                    <a href="services.html" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="glass-card expertise-card">
-                    <div class="expertise-icon-wrap">
-                        <i class="fa-solid fa-handshake fa-2x"></i>
-                    </div>
-                    <h3>Resale Services</h3>
-                    <p>A curated portfolio of pre-owned residential and commercial properties, ensuring verified documents and valuation.</p>
-                    <a href="services.html" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
-                </div>
-                
-                <!-- Card 4 -->
-                <div class="glass-card expertise-card">
-                    <div class="expertise-icon-wrap">
-                        <i class="fa-solid fa-chart-line fa-2x"></i>
-                    </div>
-                    <h3>Investment Advisory</h3>
-                    <p>Data-driven insights to help you identify high-growth areas in Pune for maximum long-term real estate appreciation.</p>
-                    <a href="services.html" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- --- Featured Projects Section --- -->
-    <section class="section-padding" style="background-color: var(--bg-dark);">
+    <!-- --- Featured Luxury Projects Section --- -->
+    <section class="section-padding" style="background-color: #FFFFFF;" id="featuredProjects">
         <div class="container">
             <div class="section-title-wrap reveal">
-                <span class="subtitle">Premium Selections</span>
-                <h2 class="shimmer-text">Featured New Launches</h2>
+                <span class="subtitle">Handpicked Portfolio</span>
+                <h2>Featured Pune New Launches</h2>
+                <p>100% verified titles, developer price guarantees, and zero brokerage for our direct clients.</p>
             </div>
-            
-            <div class="properties-grid reveal-stagger">
+
+            <div class="properties-grid">
                 <!-- Project 1: Godrej The Gale -->
-                <div class="property-card">
+                <div class="property-card tilt-card reveal">
                     <div class="property-image-wrap">
                         <img src="assets/images/godrej-gale-banner.jpg" alt="Godrej The Gale Hinjewadi" loading="lazy">
-                        <div class="property-badge badge-launch">New Launch</div>
-                        <a href="property-single.html?project=godrej-the-gale" class="btn btn-primary property-details-btn" style="padding: 8px 16px; font-size: 0.75rem;">View Details</a>
+                        <div class="property-badge-strip">
+                            <div class="property-badge badge-launch">New Launch</div>
+                            <div class="property-badge badge-rera"><i class="fa-solid fa-certificate"></i> RERA Verified</div>
+                        </div>
                     </div>
                     <div class="property-content-block">
-                        <div class="property-price">₹85 Lakh* <span style="font-size: 0.8rem; font-weight: 400; color: var(--text-muted);">onwards</span></div>
+                        <div class="property-price" data-inr-price="8500000">₹85 Lakh* <span style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">onwards</span></div>
                         <h3 class="property-title">Godrej The Gale</h3>
-                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Hinjewadi, Pune</div>
-                        <p style="font-size: 0.85rem; margin-bottom: 16px;">Premium resort-lifestyle apartments with luxury amenities and IT park proximity.</p>
+                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Hinjewadi Phase 1, Pune</div>
+                        <p style="font-size: 0.88rem; margin-bottom: 12px;">Resort-lifestyle high-rise apartments with 35+ lifestyle amenities directly opposite major IT parks.</p>
+                        
                         <div class="property-specs-strip">
                             <div class="spec-item"><i class="fa-solid fa-bed"></i> <span>2 & 3 BHK</span></div>
-                            <div class="spec-item"><i class="fa-solid fa-expand"></i> <span>750-1100 sqft</span></div>
+                            <div class="spec-item"><i class="fa-solid fa-vector-square"></i> <span>750 - 1100 sqft</span></div>
                         </div>
-                        <div style="margin-top: 20px; display: flex; gap: 10px;">
-                            <a href="#" class="btn btn-primary trigger-enquiry" data-property="Godrej The Gale" style="flex: 1; padding: 10px; font-size: 0.8rem;">Enquire Now</a>
+
+                        <div class="property-amenities-tags">
+                            <span class="amenity-tag">Infinity Pool</span>
+                            <span class="amenity-tag">Clubhouse</span>
+                            <span class="amenity-tag">Sky Track</span>
+                            <span class="amenity-tag">Metro 500m</span>
+                        </div>
+
+                        <div class="property-actions-row">
+                            <button class="btn btn-secondary trigger-blueprint" data-project="godrej-the-gale" style="padding: 10px 12px; font-size: 0.82rem;">
+                                <i class="fa-solid fa-compass-drafting"></i> Floor Plan
+                            </button>
+                            <a href="property/?project=godrej-the-gale" class="btn btn-secondary" style="padding: 10px 12px; font-size: 0.82rem;">
+                                Details
+                            </a>
+                            <a href="#" class="btn btn-whatsapp trigger-whatsapp-direct" data-property="Godrej The Gale" style="padding: 10px 12px; font-size: 0.82rem;">
+                                <i class="fa-brands fa-whatsapp"></i> Brochure
+                            </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 2: VTP Skylight -->
-                <div class="property-card">
+                <div class="property-card tilt-card reveal">
                     <div class="property-image-wrap">
                         <img src="assets/images/millennium-falcon-banner.jpg" alt="VTP Skylight Baner Annex" loading="lazy">
-                        <div class="property-badge badge-launch">Luxury Project</div>
-                        <a href="property-single.html?project=vtp-skylight" class="btn btn-primary property-details-btn" style="padding: 8px 16px; font-size: 0.75rem;">View Details</a>
+                        <div class="property-badge-strip">
+                            <div class="property-badge badge-launch">Luxury Project</div>
+                            <div class="property-badge badge-rera"><i class="fa-solid fa-certificate"></i> RERA Verified</div>
+                        </div>
                     </div>
                     <div class="property-content-block">
-                        <div class="property-price">₹84 Lakh* <span style="font-size: 0.8rem; font-weight: 400; color: var(--text-muted);">onwards</span></div>
+                        <div class="property-price" data-inr-price="8400000">₹84 Lakh* <span style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">onwards</span></div>
                         <h3 class="property-title">VTP Skylight</h3>
                         <div class="property-location"><i class="fa-solid fa-location-dot"></i> Baner Annex, Pune</div>
-                        <p style="font-size: 0.85rem; margin-bottom: 16px;">Ultra-spacious residential apartments with large deck terraces and luxury finishes.</p>
+                        <p style="font-size: 0.88rem; margin-bottom: 12px;">Ultra-spacious residential towers featuring grand deck terraces, imported finishes, and hill views.</p>
+                        
                         <div class="property-specs-strip">
                             <div class="spec-item"><i class="fa-solid fa-bed"></i> <span>3 & 4 BHK</span></div>
-                            <div class="spec-item"><i class="fa-solid fa-expand"></i> <span>1250-1800 sqft</span></div>
+                            <div class="spec-item"><i class="fa-solid fa-vector-square"></i> <span>1250 - 1800 sqft</span></div>
                         </div>
-                        <div style="margin-top: 20px; display: flex; gap: 10px;">
-                            <a href="#" class="btn btn-primary trigger-enquiry" data-property="VTP Skylight" style="flex: 1; padding: 10px; font-size: 0.8rem;">Enquire Now</a>
+
+                        <div class="property-amenities-tags">
+                            <span class="amenity-tag">Deck Balconies</span>
+                            <span class="amenity-tag">Home Automation</span>
+                            <span class="amenity-tag">Health Spa</span>
+                            <span class="amenity-tag">EV Charging</span>
+                        </div>
+
+                        <div class="property-actions-row">
+                            <button class="btn btn-secondary trigger-blueprint" data-project="vtp-skylight" style="padding: 10px 12px; font-size: 0.82rem;">
+                                <i class="fa-solid fa-compass-drafting"></i> Floor Plan
+                            </button>
+                            <a href="property/?project=vtp-skylight" class="btn btn-secondary" style="padding: 10px 12px; font-size: 0.82rem;">
+                                Details
+                            </a>
+                            <a href="#" class="btn btn-whatsapp trigger-whatsapp-direct" data-property="VTP Skylight" style="padding: 10px 12px; font-size: 0.82rem;">
+                                <i class="fa-brands fa-whatsapp"></i> Brochure
+                            </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 3: Prime Commercial Plaza -->
-                <div class="property-card">
+                <div class="property-card tilt-card reveal">
                     <div class="property-image-wrap">
-                        <img src="assets/images/commercial-plaza-banner.jpg" alt="Commercial Spaces Baner" loading="lazy">
-                        <div class="property-badge badge-commercial">Commercial</div>
-                        <a href="property-single.html?project=prime-commercial-plaza" class="btn btn-primary property-details-btn" style="padding: 8px 16px; font-size: 0.75rem;">View Details</a>
+                        <img src="assets/images/commercial-plaza-banner.jpg" alt="Commercial Showrooms Baner Highway" loading="lazy">
+                        <div class="property-badge-strip">
+                            <div class="property-badge badge-launch">Commercial</div>
+                            <div class="property-badge badge-rera"><i class="fa-solid fa-certificate"></i> Ready to Move</div>
+                        </div>
                     </div>
                     <div class="property-content-block">
-                        <div class="property-price">₹1.20 Cr* <span style="font-size: 0.8rem; font-weight: 400; color: var(--text-muted);">onwards</span></div>
+                        <div class="property-price" data-inr-price="12000000">₹1.20 Cr* <span style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">onwards</span></div>
                         <h3 class="property-title">Prime Commercial Plaza</h3>
-                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Baner, Pune</div>
-                        <p style="font-size: 0.85rem; margin-bottom: 16px;">High-visibility retail showrooms and modern office suites along highway stretch.</p>
+                        <div class="property-location"><i class="fa-solid fa-location-dot"></i> Baner Highway, Pune</div>
+                        <p style="font-size: 0.88rem; margin-bottom: 12px;">High-visibility retail showrooms and modern corporate suites along the prime highway stretch.</p>
+                        
                         <div class="property-specs-strip">
                             <div class="spec-item"><i class="fa-solid fa-shop"></i> <span>Showrooms/Offices</span></div>
-                            <div class="spec-item"><i class="fa-solid fa-expand"></i> <span>450-2500 sqft</span></div>
+                            <div class="spec-item"><i class="fa-solid fa-vector-square"></i> <span>450 - 2500 sqft</span></div>
                         </div>
-                        <div style="margin-top: 20px; display: flex; gap: 10px;">
-                            <a href="#" class="btn btn-primary trigger-enquiry" data-property="Prime Commercial Plaza" style="flex: 1; padding: 10px; font-size: 0.8rem;">Enquire Now</a>
+
+                        <div class="property-amenities-tags">
+                            <span class="amenity-tag">Glass Frontage</span>
+                            <span class="amenity-tag">Dual Escalators</span>
+                            <span class="amenity-tag">Multi-Level Parking</span>
+                            <span class="amenity-tag">100% Backup</span>
+                        </div>
+
+                        <div class="property-actions-row">
+                            <button class="btn btn-secondary trigger-blueprint" data-project="prime-commercial-plaza" style="padding: 10px 12px; font-size: 0.82rem;">
+                                <i class="fa-solid fa-compass-drafting"></i> Blueprint
+                            </button>
+                            <a href="property/?project=prime-commercial-plaza" class="btn btn-secondary" style="padding: 10px 12px; font-size: 0.82rem;">
+                                Details
+                            </a>
+                            <a href="#" class="btn btn-whatsapp trigger-whatsapp-direct" data-property="Prime Commercial Plaza" style="padding: 10px 12px; font-size: 0.82rem;">
+                                <i class="fa-brands fa-whatsapp"></i> Brochure
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div style="text-align: center; margin-top: 50px;">
-                <a href="properties.html" class="btn btn-secondary">Explore All Properties</a>
+                <a href="properties/" class="btn btn-secondary" style="padding: 14px 36px; font-size: 0.95rem;">
+                    <i class="fa-solid fa-border-all"></i> Browse All Verified Properties In Pune
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- --- Why Choose 24k Realty? --- -->
+    <!-- --- Interactive Home Loan EMI & Affordability Calculator (Enterprise Tool) --- -->
     <section class="section-padding" style="background-color: var(--bg-surface);">
         <div class="container">
-            <div class="why-us-split">
-                <div class="why-us-visual reveal reveal-left" style="order: 1;">
-                    <!-- Showcase of Gold Shield/Aesthetic -->
-                    <div style="width: 100%; height: 440px; border-radius: var(--border-radius-lg); background: linear-gradient(135deg, rgba(7, 9, 12, 0.95) 0%, rgba(229, 178, 62, 0.08) 100%); border: var(--border-glass-gold); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 30px; box-shadow: var(--shadow-soft);">
-                        <div style="font-size: 3.5rem; color: var(--text-gold); margin-bottom: 20px;"><i class="fa-solid fa-award"></i></div>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 12px; font-weight: 500;">Gold Standard Assurance</h3>
-                        <p style="max-width: 320px; color: var(--text-muted); font-size: 0.95rem;">Every client interaction is governed by strict transparency, verified credentials, and local market intelligence.</p>
-                        <div style="display: flex; gap: 24px; margin-top: 30px;">
-                            <div>
-                                <span class="stat-counter" style="font-size: 1.8rem; font-weight: 700; color: var(--text-gold); display: block;">100%</span>
-                                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Transparency</span>
+            <div class="section-title-wrap reveal">
+                <span class="subtitle">PropTech Financial Tools</span>
+                <h2>Interactive Home Loan EMI Calculator</h2>
+                <p>Plan your purchase with accurate, real-time monthly instalment calculations and visual principal vs interest breakdown.</p>
+            </div>
+
+            <div class="emi-calculator-card reveal">
+                <!-- Sliders Column -->
+                <div>
+                    <!-- Loan Amount -->
+                    <div class="calc-slider-group">
+                        <div class="slider-label-row">
+                            <label for="loanAmountSlider"><i class="fa-solid fa-wallet"></i> Loan Amount Required</label>
+                            <span class="slider-val-bubble" id="loanValDisplay">₹75 Lakh</span>
+                        </div>
+                        <input type="range" class="calc-range-slider" id="loanAmountSlider" min="2000000" max="50000000" step="500000" value="7500000">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 6px;">
+                            <span>₹20 Lakh</span>
+                            <span>₹2.5 Cr</span>
+                            <span>₹5.0 Cr</span>
+                        </div>
+                    </div>
+
+                    <!-- Interest Rate -->
+                    <div class="calc-slider-group">
+                        <div class="slider-label-row">
+                            <label for="interestRateSlider"><i class="fa-solid fa-percent"></i> Expected Interest Rate (p.a.)</label>
+                            <span class="slider-val-bubble" id="rateValDisplay">8.5% p.a.</span>
+                        </div>
+                        <input type="range" class="calc-range-slider" id="interestRateSlider" min="7.5" max="12.0" step="0.1" value="8.5">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 6px;">
+                            <span>7.5%</span>
+                            <span>9.5%</span>
+                            <span>12.0%</span>
+                        </div>
+                    </div>
+
+                    <!-- Tenure -->
+                    <div class="calc-slider-group">
+                        <div class="slider-label-row">
+                            <label for="tenureSlider"><i class="fa-solid fa-clock-rotate-left"></i> Loan Tenure</label>
+                            <span class="slider-val-bubble" id="tenureValDisplay">20 Years</span>
+                        </div>
+                        <input type="range" class="calc-range-slider" id="tenureSlider" min="5" max="30" step="1" value="20">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 6px;">
+                            <span>5 Years</span>
+                            <span>15 Years</span>
+                            <span>30 Years</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 24px; padding: 14px 18px; background: var(--bg-surface); border-radius: var(--border-radius-md); border: 1px solid var(--border-color); display: flex; align-items: center; gap: 12px;">
+                        <i class="fa-solid fa-building-columns" style="color: var(--gold-primary); font-size: 1.25rem;"></i>
+                        <span style="font-size: 0.85rem; color: #475569;">
+                            We partner with <strong>HDFC, SBI, ICICI, Axis Bank</strong> for expedited pre-approval and special corporate concession rates.
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Results Output Column -->
+                <div class="emi-results-panel">
+                    <div class="emi-main-output">
+                        <span>Estimated Monthly Installment (EMI)</span>
+                        <div class="emi-amount-display" id="emiAmountDisplay">₹65,082</div>
+                        <p style="font-size: 0.82rem; margin-top: 4px; color: var(--text-muted);">*Calculated on monthly reducing balance</p>
+                    </div>
+
+                    <div class="emi-breakdown-stats">
+                        <div class="emi-breakdown-item">
+                            <span>Principal Loan Amount:</span>
+                            <span id="totalPrincipalDisplay">₹75 Lakh</span>
+                        </div>
+                        <div class="emi-breakdown-item">
+                            <span>Total Interest Payable:</span>
+                            <span id="totalInterestDisplay">₹81.19 Lakh</span>
+                        </div>
+                        <div class="emi-breakdown-item">
+                            <span>Total Payable (Principal + Interest):</span>
+                            <span id="totalPayableDisplay">₹1.56 Cr</span>
+                        </div>
+
+                        <!-- Visual Ratio Bar -->
+                        <div style="margin-top: 10px;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: 700; margin-bottom: 4px;">
+                                <span style="color: var(--text-gold-dark);">■ Principal Amount</span>
+                                <span style="color: #64748B;">■ Interest Portion</span>
                             </div>
-                            <div style="border-left: 1px solid rgba(255, 255, 255, 0.1);"></div>
-                            <div>
-                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--text-gold); display: block;">End-to-End</span>
-                                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Assistance</span>
+                            <div class="emi-ratio-bar">
+                                <div class="ratio-principal" id="principalRatioBar" style="width: 48%;"></div>
+                                <div class="ratio-interest" id="interestRatioBar" style="width: 52%;"></div>
                             </div>
                         </div>
                     </div>
+
+                    <a href="#contact" class="btn btn-primary trigger-enquiry" data-property="Home Loan Assistance" style="width: 100%; justify-content: center;">
+                        <i class="fa-solid fa-file-invoice-dollar"></i> Apply for Bank Pre-Approval
+                    </a>
                 </div>
-                
-                <div class="why-us-content reveal reveal-right" style="order: 2;">
-                    <span class="subtitle">Why Choose Us</span>
-                    <h2 class="shimmer-text" style="font-family: var(--font-serif); font-size: 2.25rem;">The 24k Standard of Excellence</h2>
-                    
-                    <div class="checklist-grid">
-                        <div class="checklist-item">
-                            <div class="checklist-check"><i class="fa-solid fa-check"></i></div>
-                            <div>
-                                <h4>Client-Centric Approach</h4>
-                                <p>Your requirements are our blueprint. We listen first, then suggest. Your dream home is our priority.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="checklist-item">
-                            <div class="checklist-check"><i class="fa-solid fa-check"></i></div>
-                            <div>
-                                <h4>Deep Market Intelligence</h4>
-                                <p>Deep local expertise in Pune's real estate landscape to find you the best deals before they hit the general market.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="checklist-item">
-                            <div class="checklist-check"><i class="fa-solid fa-check"></i></div>
-                            <div>
-                                <h4>Absolute Transparency</h4>
-                                <p>No hidden costs or complex jargon. We provide clear, honest communication at every step of your transaction.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="checklist-item">
-                            <div class="checklist-check"><i class="fa-solid fa-check"></i></div>
-                            <div>
-                                <h4>Seamless Execution</h4>
-                                <p>From guided site visits to final documentation verification and registration paperwork, we manage the heavy lifting.</p>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- The 24K VIP Buying Journey (5-Step Visual Stepper) --- -->
+    <section class="section-padding" style="background-color: #FFFFFF;">
+        <div class="container">
+            <div class="section-title-wrap reveal">
+                <span class="subtitle">Seamless PropTech Experience</span>
+                <h2>The 24K VIP Buying Journey</h2>
+                <p>Five transparent stages designed to guide you effortlessly from initial exploration to key handover.</p>
+            </div>
+
+            <div class="journey-steps-grid reveal">
+                <!-- Step 1 -->
+                <div class="journey-step-card">
+                    <div class="step-num-badge">01</div>
+                    <h4>Profiling & Match</h4>
+                    <p>We analyze your budget, family layout requirements, and micro-market preferences to shortlist 3 top projects.</p>
                 </div>
+
+                <!-- Step 2 -->
+                <div class="journey-step-card">
+                    <div class="step-num-badge">02</div>
+                    <h4>Guided VIP Visits</h4>
+                    <p>Complimentary chauffeur-driven site tours accompanied by our senior property specialist at your chosen time.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="journey-step-card">
+                    <div class="step-num-badge">03</div>
+                    <h4>Legal Due Diligence</h4>
+                    <p>Full verification of developer RERA titles, sanction approvals, floor plans, and encumbrance certificates.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="journey-step-card">
+                    <div class="step-num-badge">04</div>
+                    <h4>Direct Negotiation</h4>
+                    <p>Leverage our institutional volume relationships with top developers to secure exclusive pre-launch discounts.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="journey-step-card">
+                    <div class="step-num-badge">05</div>
+                    <h4>Keys & Handover</h4>
+                    <p>Doorstep agreement registration, home loan disbursement, and key handover celebration with 24K Realty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Comparison Table: 24K Advantage vs Traditional Brokers --- -->
+    <section class="section-padding" style="background-color: var(--bg-surface);">
+        <div class="container">
+            <div class="section-title-wrap reveal">
+                <span class="subtitle">Why Choose 24K Realty</span>
+                <h2>The 24K Advantage vs Traditional Brokers</h2>
+                <p>Discover why 1,200+ discerning families and corporate investors trust our advisory.</p>
+            </div>
+
+            <div class="comparison-container reveal">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="col-feature">Service Standard</th>
+                            <th class="col-24k"><i class="fa-solid fa-crown"></i> 24K Realty Gold Standard</th>
+                            <th class="col-standard">Traditional Property Brokers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Brokerage on New Launches</strong></td>
+                            <td class="cell-24k"><i class="fa-solid fa-circle-check" style="color: var(--emerald-green);"></i> 0% (Completely Free for Buyers)</td>
+                            <td class="cell-standard">1% – 2% Commission Charged</td>
+                        </tr>
+                        <tr>
+                            <td><strong>RERA Legal Title Verification</strong></td>
+                            <td class="cell-24k"><i class="fa-solid fa-circle-check" style="color: var(--emerald-green);"></i> 100% Certified Legal Due Diligence</td>
+                            <td class="cell-standard">Limited or No Title Verification</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Site Tour Experience</strong></td>
+                            <td class="cell-24k"><i class="fa-solid fa-circle-check" style="color: var(--emerald-green);"></i> VIP Chauffeur-Driven Guided Tours</td>
+                            <td class="cell-standard">Self-Arranged Site Navigation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pricing Negotiation</strong></td>
+                            <td class="cell-24k"><i class="fa-solid fa-circle-check" style="color: var(--emerald-green);"></i> Direct Institutional Volume Pricing</td>
+                            <td class="cell-standard">Standard Developer Rack Rates</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Doorstep Loan Assistance</strong></td>
+                            <td class="cell-24k"><i class="fa-solid fa-circle-check" style="color: var(--emerald-green);"></i> End-to-End Multi-Bank Pre-Approvals</td>
+                            <td class="cell-standard">Buyer Navigates Banks Independently</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 
     <!-- --- Testimonials Section --- -->
-    <section class="section-padding" style="background-color: var(--bg-dark);">
+    <section class="section-padding" style="background-color: #FFFFFF;">
         <div class="container">
             <div class="section-title-wrap reveal">
-                <span class="subtitle">Testimonials</span>
-                <h2 class="shimmer-text">Client Success Stories</h2>
+                <span class="subtitle">Verified Client Experiences</span>
+                <h2>Client Success Stories</h2>
+                <p>Real experiences from Pune homebuyers and commercial property investors.</p>
             </div>
-            
-            <div class="testimonials-slider-container reveal reveal-scale">
-                <!-- Slide 1 -->
-                <div class="testimonial-slide-card active">
-                    <div class="client-rating">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+
+            <div class="testimonials-grid reveal">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="client-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "We booked our dream 3 BHK flat at VTP Skylight Baner through 24K Realty. Their team explained everything transparently, arranged chauffeur pickup for site visits, and saved us nearly ₹4.5 Lakhs during negotiation."
+                        </p>
                     </div>
-                    <blockquote class="testimonial-text">
-                        "We booked our dream 3 BHK flat at VTP Skylight through 24k Realty. Their team explained everything transparently and assisted us with the entire paperwork. The gold standard service indeed!"
-                    </blockquote>
-                    <div class="client-info">
-                        <h4>Amit Sharma</h4>
-                        <span>VTP Skylight Booker</span>
-                    </div>
-                </div>
-                
-                <!-- Slide 2 -->
-                <div class="testimonial-slide-card">
-                    <div class="client-rating">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <blockquote class="testimonial-text">
-                        "Finding the right commercial showroom is tough. The team at 24k Realty analysed locations and budget, closing the Godrej The Gale shop deal smoothly. Highly recommend their market intelligence!"
-                    </blockquote>
-                    <div class="client-info">
-                        <h4>Rajesh Patil</h4>
-                        <span>Godrej The Gale Investor</span>
+                    <div class="client-info-row">
+                        <div class="client-avatar">AS</div>
+                        <div class="client-meta">
+                            <h4>Amit Sharma</h4>
+                            <span>VTP Skylight Homeowner, Baner Annex</span>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Slide 3 -->
-                <div class="testimonial-slide-card">
-                    <div class="client-rating">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="client-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Finding the right commercial showroom on Baner highway was seamless with 24K Realty. Their rental yield analysis and RERA verification gave me complete peace of mind. Highly recommended!"
+                        </p>
                     </div>
-                    <blockquote class="testimonial-text">
-                        "Professionalism and transparency are rare in real estate. 24k Realty has both. No hidden costs, clear consultations. Site visits were fully guided and timed."
-                    </blockquote>
-                    <div class="client-info">
-                        <h4>Nisha Mehta</h4>
-                        <span>Residential Buyer</span>
+                    <div class="client-info-row">
+                        <div class="client-avatar">RP</div>
+                        <div class="client-meta">
+                            <h4>Rajesh Patil</h4>
+                            <span>Commercial Investor, Baner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="client-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Transparency and punctuality are rare in the property market. 24K Realty embodies both. No hidden charges, zero brokerage, and their legal team reviewed every clause of our sale agreement."
+                        </p>
+                    </div>
+                    <div class="client-info-row">
+                        <div class="client-avatar">NM</div>
+                        <div class="client-meta">
+                            <h4>Nisha Mehta</h4>
+                            <span>Godrej The Gale Resident, Hinjewadi</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Indicators Dots -->
-            <div class="testimonial-controls" id="testimonialDots"></div>
         </div>
     </section>
 
-    <!-- --- Contact Us Section --- -->
+    <!-- --- Contact Us / VIP Site Visit Booking Section --- -->
     <section class="section-padding" style="background-color: var(--bg-surface);" id="contact">
         <div class="container">
             <div class="contact-section-split">
+                <!-- Contact Info Block -->
                 <div class="contact-info-block reveal reveal-left">
                     <div>
                         <span class="subtitle" style="text-align: left; margin: 0;">Get In Touch</span>
-                        <h2 class="shimmer-text" style="font-family: var(--font-serif); font-size: 2.25rem; margin-top: 8px;">Let's Connect</h2>
-                        <p style="margin-top: 14px;">Whether you are looking for your dream home or a strategic business location, our expert consultants are here to guide you every step of the way.</p>
+                        <h2 style="font-family: var(--font-serif); font-size: 2.3rem; margin-top: 8px;">Let's Connect with 24K Realty</h2>
+                        <p style="margin-top: 14px;">Whether you are looking for your dream home or a strategic business location in Pune, our certified consultants are available for personalized consultations.</p>
                     </div>
                     
                     <div class="contact-info-item">
                         <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
                         <div>
-                            <h4>Office Address</h4>
-                            <p>Office no 408, Baner, Pune</p>
+                            <h4>Corporate Office</h4>
+                            <p>Office no 408, Baner, Pune, Maharashtra 411045</p>
                         </div>
                     </div>
                     
                     <div class="contact-info-item">
                         <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
                         <div>
-                            <h4>Email Us</h4>
+                            <h4>Email Enquiries</h4>
                             <p><a href="mailto:24k.realty.1@gmail.com">24k.realty.1@gmail.com</a></p>
                         </div>
                     </div>
@@ -480,7 +819,7 @@
                     <div class="contact-info-item">
                         <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
                         <div>
-                            <h4>Call / WhatsApp</h4>
+                            <h4>Call / WhatsApp Direct</h4>
                             <p><a href="tel:+917218372145">+91 72183 72145</a></p>
                         </div>
                     </div>
@@ -488,85 +827,102 @@
                     <div class="contact-info-item">
                         <div class="contact-icon-box"><i class="fa-solid fa-clock"></i></div>
                         <div>
-                            <h4>Business Hours</h4>
-                            <p>Monday – Saturday: 10:00 AM – 7:00 PM<br>Sunday: By Appointment Only</p>
+                            <h4>Advisory Hours</h4>
+                            <p>Monday – Saturday: 10:00 AM – 7:00 PM<br>Sunday: VIP Guided Site Tours by Appointment</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="contact-form-block glass-card reveal reveal-right">
-                    <h3 style="margin-bottom: 24px; font-size: 1.35rem; font-weight: 600;">Request a Free Consultation</h3>
+                <!-- VIP Booking Form -->
+                <div class="contact-form-block reveal reveal-right">
+                    <h3 style="margin-bottom: 8px; font-size: 1.4rem; font-weight: 700;">Schedule a Free VIP Site Visit</h3>
+                    <p style="font-size: 0.88rem; margin-bottom: 24px;">Complete the form below to receive exclusive brochure kits and book chauffeur-driven site tours.</p>
                     
                     <form class="contact-form" id="contactForm">
-                        <div class="form-control-wrap">
-                            <input type="text" placeholder="Your Name" class="form-input" required>
+                        <div class="form-grid-2col">
+                            <div class="form-control-wrap">
+                                <label for="userName">Your Full Name *</label>
+                                <input type="text" id="userName" placeholder="e.g. Rahul Deshmukh" class="form-input" required>
+                            </div>
+                            <div class="form-control-wrap">
+                                <label for="userEmail">Email Address *</label>
+                                <input type="email" id="userEmail" placeholder="e.g. rahul@gmail.com" class="form-input" required>
+                            </div>
                         </div>
-                        <div class="form-control-wrap">
-                            <input type="email" placeholder="Your Email" class="form-input" required>
+
+                        <div class="form-grid-2col">
+                            <div class="form-control-wrap">
+                                <label for="userPhone">WhatsApp / Mobile Number *</label>
+                                <input type="tel" id="userPhone" placeholder="e.g. +91 98220 12345" class="form-input" required>
+                            </div>
+                            <div class="form-control-wrap">
+                                <label for="userInterest">Property Interest *</label>
+                                <select class="form-input" id="userInterest" required>
+                                    <option value="">Select Property Interest</option>
+                                    <option value="Residential 2/3 BHK">Residential 2 & 3 BHK Flats</option>
+                                    <option value="Luxury Penthouses">3 & 4 BHK Luxury Penthouses</option>
+                                    <option value="Commercial Showrooms">Commercial Showrooms</option>
+                                    <option value="Grade-A Offices">Corporate Office Suites</option>
+                                    <option value="Investment Advisory">High-Yield Investment Advisory</option>
+                                </select>
+                            </div>
                         </div>
+
                         <div class="form-control-wrap form-full-width">
-                            <input type="tel" placeholder="Phone Number" class="form-input" required>
-                        </div>
-                        <div class="form-control-wrap form-full-width">
-                            <select class="form-input" style="background: rgba(255, 255, 255, 0.03); color: var(--text-light);" required>
-                                <option value="" style="background: var(--bg-surface); color: var(--text-muted);">Property Interest</option>
-                                <option value="Residential" style="background: var(--bg-surface); color: var(--text-light);">Residential Flats</option>
-                                <option value="Commercial" style="background: var(--bg-surface); color: var(--text-light);">Commercial Spaces</option>
-                                <option value="Investment" style="background: var(--bg-surface); color: var(--text-light);">Investment Advisory</option>
-                            </select>
-                        </div>
-                        <div class="form-control-wrap form-full-width">
-                            <textarea placeholder="Your Message" class="form-textarea" required></textarea>
+                            <label for="userMessage">Your Requirements & Preferred Visit Date</label>
+                            <textarea id="userMessage" placeholder="Specify preferred project, budget range, or ideal site visit date..." class="form-textarea" required></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary form-full-width" style="height: 50px;">Book Free Consultation</button>
+                        <button type="submit" class="btn btn-primary form-full-width" style="height: 52px; font-size: 1rem;">
+                            <i class="fa-regular fa-calendar-check"></i> Confirm VIP Consultation
+                        </button>
                     </form>
                     
-                    <!-- Success overlay animation -->
+                    <!-- Submission Success Overlay -->
                     <div class="form-success-overlay">
                         <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
-                        <h3>Consultation Booked!</h3>
-                        <p>Our gold standard property consultant will call you within 2 business hours.</p>
+                        <h3>VIP Consultation Booked!</h3>
+                        <p>Our senior property consultant will reach out via WhatsApp & call within 2 business hours with project brochures.</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Map Embed -->
-            <div class="map-container">
-                <iframe src="https://maps.google.com/maps?q=Office%20no%20408,%20Baner,%20Pune&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- Office Map Embed -->
+            <div class="map-container reveal">
+                <iframe src="https://maps.google.com/maps?q=Office%20no%20408,%20Baner,%20Pune&t=&z=15&ie=UTF8&iwloc=&output=embed" title="24K Realty Baner Office Location" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- --- Footer --- -->
+    <!-- --- Site Footer --- -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="assets/images/logo-light.png" alt="24k Realty Footer Logo" class="footer-logo" loading="lazy">
-                    <p>Premier real estate consultancy firm dedicated to providing gold-standard service in Pune. Dream spaces bridged to reality.</p>
+                    <img src="assets/images/logo-light.png" alt="24K Realty Footer Logo" class="footer-logo" loading="lazy">
+                    <p>Premier real estate consultancy firm dedicated to providing gold-standard property guidance, certified RERA documentation, and exclusive pre-launch deals across Pune.</p>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/24k_realty?igsh=dnp0ZDlnb3Juazho" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/1BSKggxUkM/" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/24k_realty?igsh=dnp0ZDlnb3Juazho" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BSKggxUkM/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://wa.me/917218372145" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
                 
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="properties.html">Properties</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="./">Home</a></li>
+                        <li><a href="properties/">Verified Properties</a></li>
+                        <li><a href="services/">Advisory Services</a></li>
+                        <li><a href="about/">About 24K Realty</a></li>
+                        <li><a href="contact/">Contact & Site Visits</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-contact">
                     <h4>Contact Details</h4>
                     <ul>
-                        <li><i class="fa-solid fa-location-dot"></i> <span>Office no 408, Baner, Pune</span></li>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Office no 408, Baner, Pune, Maharashtra 411045</span></li>
                         <li><i class="fa-solid fa-envelope"></i> <a href="mailto:24k.realty.1@gmail.com">24k.realty.1@gmail.com</a></li>
                         <li><i class="fa-solid fa-phone"></i> <a href="tel:+917218372145">+91 72183 72145</a></li>
                     </ul>
@@ -574,52 +930,135 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 24k Realty. All Rights Reserved.</p>
-                <p style="font-size: 0.8rem; color: rgba(255,255,255,0.1);">Designed with 24k Gold Standard</p>
+                <p>&copy; 2026 24K Realty. All Rights Reserved. Setting the Gold Standard in Real Estate.</p>
+                <p style="font-size: 0.8rem; color: #94A3B8;">RERA Disclaimer: Project details and images are for representational and advisory purposes.</p>
             </div>
         </div>
     </footer>
 
     <!-- --- Floating WhatsApp Widget --- -->
     <div class="whatsapp-widget">
-        <a href="#" class="whatsapp-btn" id="whatsappWidget" aria-label="Chat with 24k Realty on WhatsApp">
+        <a href="#" class="whatsapp-btn" id="whatsappWidget" aria-label="Chat with 24K Realty on WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
+    </div>
+
+    <!-- --- Mobile Bottom Sticky Action Bar --- -->
+    <div class="mobile-bottom-bar">
+        <div class="mobile-bottom-actions">
+            <a href="tel:+917218372145" class="btn btn-secondary" style="border-color: var(--border-color);">
+                <i class="fa-solid fa-phone"></i> Call
+            </a>
+            <a href="#" class="btn btn-whatsapp trigger-whatsapp-direct" data-property="Mobile Floating Bar">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#contact" class="btn btn-primary trigger-enquiry" data-property="Mobile Sticky Bar Consultation">
+                <i class="fa-regular fa-calendar-check"></i> Book Visit
+            </a>
+        </div>
     </div>
 
     <!-- --- Interactive Inquiry Modal Overlay --- -->
     <div class="inquiry-modal-overlay" id="inquiryModalOverlay">
         <div class="inquiry-modal">
             <div class="modal-header">
-                <h3>Express Your Interest</h3>
-                <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+                <h3 style="font-size: 1.3rem;">Express Your Interest</h3>
+                <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
             </div>
             <div class="modal-body">
-                <span id="modalSubtitle" style="display: block; font-family: var(--font-heading); font-size: 0.9rem; color: var(--text-gold); margin-bottom: 20px; text-transform: uppercase; font-weight: 600;">Enquiry for: Godrej The Gale</span>
+                <span id="modalSubtitle" style="display: block; font-family: var(--font-heading); font-size: 0.88rem; color: var(--text-gold-dark); margin-bottom: 20px; text-transform: uppercase; font-weight: 700;">Enquiry for: Godrej The Gale</span>
                 
-                <form id="modalForm" style="display: flex; flex-direction: column; gap: 16px;">
-                    <input type="hidden" id="modalPropertyTitle" value="General">
-                    <div class="form-control-wrap">
-                        <input type="text" placeholder="Your Name" class="form-input" required style="width: 100%;">
+                <form id="modalForm" style="display: flex; flex-direction: column; gap: 14px;">
+                    <input type="hidden" id="modalPropertyTitle" value="General Consultation">
+                    <div class="form-control-wrap" style="margin-bottom: 0;">
+                        <input type="text" placeholder="Your Full Name" class="form-input" required>
                     </div>
-                    <div class="form-control-wrap">
-                        <input type="email" placeholder="Your Email" class="form-input" required style="width: 100%;">
+                    <div class="form-control-wrap" style="margin-bottom: 0;">
+                        <input type="email" placeholder="Your Email Address" class="form-input" required>
                     </div>
-                    <div class="form-control-wrap">
-                        <input type="tel" placeholder="Phone Number" class="form-input" required style="width: 100%;">
+                    <div class="form-control-wrap" style="margin-bottom: 0;">
+                        <input type="tel" placeholder="WhatsApp / Phone Number" class="form-input" required>
                     </div>
-                    <div class="form-control-wrap">
-                        <textarea placeholder="Write your requirements (budget, BHK size, timeline)..." class="form-textarea" required style="width: 100%; height: 100px;"></textarea>
+                    <div class="form-control-wrap" style="margin-bottom: 0;">
+                        <textarea placeholder="Specify requirements (Budget, Preferred Location, 2/3 BHK, Timeline)..." class="form-textarea" required style="height: 90px;"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; height: 48px;">
+                        <i class="fa-regular fa-paper-plane"></i> Submit Request
+                    </button>
                 </form>
                 
                 <!-- Success overlay inside modal -->
                 <div class="form-success-overlay">
                     <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
                     <h3>Inquiry Received!</h3>
-                    <p>Our property manager is preparing property details and brochure for you.</p>
+                    <p>Our senior property consultant is preparing the brochure and price sheet for you.</p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- Interactive Floor Plan Blueprint Modal --- -->
+    <div class="inquiry-modal-overlay" id="blueprintModalOverlay">
+        <div class="blueprint-modal">
+            <div class="modal-header">
+                <div>
+                    <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-gold-dark); letter-spacing: 0.08em; display: block;">Architectural Blueprint View</span>
+                    <h3 id="blueprintModalTitle" style="font-size: 1.4rem;">Godrej The Gale - Floor Plan</h3>
+                </div>
+                <button class="modal-close-btn" id="blueprintCloseBtn" aria-label="Close Blueprint">&times;</button>
+            </div>
+
+            <!-- Blueprint Category Tabs -->
+            <div class="blueprint-tabs">
+                <button class="blueprint-tab-btn active" data-config="2bhk">2 BHK Luxury Layout</button>
+                <button class="blueprint-tab-btn" data-config="3bhk">3 BHK Grand Deck Layout</button>
+            </div>
+
+            <!-- Blueprint Vector Presentation -->
+            <div class="blueprint-canvas">
+                <svg class="blueprint-vector-svg" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="20" y="20" width="560" height="260" fill="#FFFFFF" stroke="#C59B27" stroke-width="2" stroke-dasharray="6,4" rx="8"/>
+                    <!-- Living & Dining -->
+                    <rect x="35" y="35" width="260" height="150" fill="#FAF6EB" stroke="#9A751B" stroke-width="1.5" rx="4"/>
+                    <text x="165" y="105" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#0F172A">Living &amp; Dining Hall</text>
+                    <text x="165" y="125" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#64748B">18'0" x 11'6"</text>
+                    <!-- Deck Balcony -->
+                    <rect x="35" y="195" width="260" height="70" fill="#ECFDF5" stroke="#059669" stroke-width="1.5" rx="4"/>
+                    <text x="165" y="235" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#059669">Sun Deck Balcony</text>
+                    <text x="165" y="252" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#059669">Panoramic Hill Views</text>
+                    <!-- Master Bedroom -->
+                    <rect x="305" y="35" width="260" height="125" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" rx="4"/>
+                    <text x="435" y="95" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#0F172A">Master Bedroom</text>
+                    <text x="435" y="115" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#64748B">13'6" x 11'0" + Ensuite Bath</text>
+                    <!-- Bedroom 2 & Kitchen -->
+                    <rect x="305" y="170" width="130" height="95" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" rx="4"/>
+                    <text x="370" y="215" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#0F172A">Kitchen</text>
+                    <text x="370" y="232" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#64748B">9'6" x 8'0"</text>
+                    <rect x="445" y="170" width="120" height="95" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" rx="4"/>
+                    <text x="505" y="215" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#0F172A">Bedroom 2</text>
+                    <text x="505" y="232" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#64748B">11'0" x 10'0"</text>
+                </svg>
+
+                <h4 id="blueprintTypeTitle" style="font-size: 1.15rem; margin-bottom: 8px;">2 BHK Luxury Resort Residence</h4>
+                <div class="blueprint-specs-row" style="justify-content: center;">
+                    <span class="blueprint-spec-pill"><i class="fa-solid fa-ruler-combined"></i> Carpet Area: <strong id="blueprintCarpetVal">785 Sq. Ft.</strong></span>
+                    <span class="blueprint-spec-pill"><i class="fa-solid fa-sun"></i> Balcony: <strong id="blueprintBalconyVal">95 Sq. Ft. Deck</strong></span>
+                    <span class="blueprint-spec-pill"><i class="fa-solid fa-chart-pie"></i> Efficiency: <strong id="blueprintLoadingVal">32% Loading</strong></span>
+                </div>
+            </div>
+
+            <!-- Room Dimensions Checklist -->
+            <div class="blueprint-room-grid" id="blueprintRoomsGrid">
+                <!-- Populated dynamically by JS -->
+            </div>
+
+            <div style="display: flex; gap: 12px; margin-top: 24px;">
+                <a href="#contact" class="btn btn-primary trigger-enquiry" data-property="Sample Flat Site Visit" style="flex: 1; justify-content: center;">
+                    <i class="fa-regular fa-calendar-check"></i> Book Sample Flat Visit
+                </a>
+                <a href="#" class="btn btn-whatsapp trigger-whatsapp-direct" data-property="PDF Blueprint Download" style="flex: 1; justify-content: center;">
+                    <i class="fa-solid fa-download"></i> Get PDF Blueprint on WhatsApp
+                </a>
             </div>
         </div>
     </div>

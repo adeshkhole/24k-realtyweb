@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed property overview, configurations, floor plan details, and RERA number for premium projects in Pune.">
+    <meta name="author" content="24K Realty">
+    
+    <title>Property Details | 24K Realty Pune</title>
+    
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Light Luxury Enterprise Style Sheet -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <link rel="shortcut icon" href="../assets/images/logo-light.png" type="image/png">
+</head>
+<body>
+
+    <!-- --- Header Navigation --- -->
+    <header class="site-header scrolled" id="siteHeader">
+        <div class="container">
+            <div class="header-wrap">
+                <a href="../" class="logo" aria-label="24K Realty Home">
+                    <img src="../assets/images/logo-light.png" alt="24K Realty Gold Logo">
+                </a>
+                
+                <nav class="desktop-nav" aria-label="Primary Navigation">
+                    <ul>
+                        <li><a href="../">Home</a></li>
+                        <li class="active"><a href="../properties/">Properties</a></li>
+                        <li><a href="../services/">Services</a></li>
+                        <li><a href="../about/">About</a></li>
+                        <li><a href="../contact/">Contact Us</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-action">
+                    <!-- NRI Currency Switcher -->
+                    <div class="currency-switcher" aria-label="Select Currency">
+                        <button class="currency-btn active" data-currency="INR">₹ INR</button>
+                        <button class="currency-btn" data-currency="USD">$ USD</button>
+                        <button class="currency-btn" data-currency="AED">AED</button>
+                    </div>
+
+                    <a href="tel:+917218372145" class="header-phone-chip" aria-label="Call 24K Realty">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 72183 72145</span>
+                    </a>
+                    <a href="#contactForm" class="btn btn-primary trigger-enquiry" id="dynEnquiryTrigger" data-property="General">
+                        <i class="fa-regular fa-calendar-check"></i> Enquire Now
+                    </a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <button class="modal-close-btn" id="drawerClose" aria-label="Close Menu">&times;</button>
+        
+        <div style="margin-top: 10px;">
+            <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 6px;">Select Currency:</span>
+            <div class="currency-switcher" style="width: 100%; justify-content: space-around;" aria-label="Select Currency">
+                <button class="currency-btn active" data-currency="INR">₹ INR</button>
+                <button class="currency-btn" data-currency="USD">$ USD</button>
+                <button class="currency-btn" data-currency="AED">AED</button>
+            </div>
+        </div>
+
+        <ul>
+            <li><a href="../">Home</a></li>
+            <li class="active"><a href="../properties/">Properties</a></li>
+            <li><a href="../services/">Services</a></li>
+            <li><a href="../about/">About</a></li>
+            <li><a href="../contact/">Contact Us</a></li>
+        </ul>
+        <a href="tel:+917218372145" class="btn btn-secondary" style="width: 100%; justify-content: center;">
+            <i class="fa-solid fa-phone"></i> +91 72183 72145
+        </a>
+        <a href="#contactForm" class="btn btn-primary trigger-enquiry" data-property="General Consultation" style="width: 100%; justify-content: center;">
+            Book Consultation
+        </a>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- --- Inner Page Dynamic Hero Banner --- -->
+    <section class="inner-hero" style="background-image: url('../assets/images/hero_daylight.jpg');">
+        <div class="container">
+            <h1 class="text-gold-gradient shimmer-text" id="dynPropertyTitle">Property Title</h1>
+            <div class="breadcrumb-path">
+                <a href="../">Home</a>
+                <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; align-self: center;"></i>
+                <a href="../properties/">Properties</a>
+                <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; align-self: center;"></i>
+                <span id="dynPropertyTitleHero">Property</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Property Details Content --- -->
+    <section class="section-padding" style="background-color: var(--bg-surface);">
+        <div class="container">
+            <div class="detail-grid">
+                <!-- Left Details Area -->
+                <div>
+                    <!-- Big Gallery Image -->
+                    <div class="detail-gallery reveal">
+                        <img src="../assets/images/hero_daylight.jpg" alt="Property Main View" id="dynGalleryImg">
+                    </div>
+                    
+                    <!-- Title & Price Block -->
+                    <div class="detail-header-strip reveal">
+                        <div>
+                            <span id="dynPropertyType" style="color: var(--text-gold-dark); font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700; text-transform: uppercase;">Residential</span>
+                            <h2 id="dynPropertyName" style="margin-top: 4px; font-family: var(--font-serif); font-size: 2.2rem;">Property Name</h2>
+                            <p id="dynPropertyAddress"><i class="fa-solid fa-location-dot" style="color: var(--gold-primary);"></i> Baner, Pune</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Price Guide</span>
+                            <span id="dynPropertyPrice" style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--text-gold-dark);">₹85 Lakh*</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Overview Description -->
+                    <div class="detail-description reveal">
+                        <h3 class="detail-section-title">Project Overview</h3>
+                        <p id="dynPropertyDesc" style="line-height: 1.8; font-size: 1.05rem;">Project description goes here dynamically based on chosen parameters.</p>
+                    </div>
+                    
+                    <!-- Amenities -->
+                    <div class="reveal" style="margin-top: 32px;">
+                        <h3 class="detail-section-title">Key Amenities</h3>
+                        <div class="amenities-list" id="dynAmenitiesList">
+                            <!-- Populated dynamically by JS -->
+                        </div>
+                    </div>
+                    
+                    <!-- Specifications Block -->
+                    <div class="reveal" style="margin-top: 32px;">
+                        <h3 class="detail-section-title">Specifications Checklist</h3>
+                        <div class="detail-specs-table">
+                            <div class="detail-spec-box">
+                                <span>Property Category</span>
+                                <span id="dynSpecType">Residential</span>
+                            </div>
+                            <div class="detail-spec-box">
+                                <span>Configuration</span>
+                                <span id="dynSpecConfig">2 & 3 BHK</span>
+                            </div>
+                            <div class="detail-spec-box">
+                                <span>Super Built Area</span>
+                                <span id="dynSpecArea">750 - 1100 Sqft</span>
+                            </div>
+                            <div class="detail-spec-box">
+                                <span>Project Status</span>
+                                <span id="dynSpecStatus">New Launch</span>
+                            </div>
+                            <div class="detail-spec-box">
+                                <span>Price Range</span>
+                                <span id="dynSpecPrice" style="color: var(--text-gold-dark); font-weight: 700;">Starting at ₹85 Lakh*</span>
+                            </div>
+                            <div class="detail-spec-box">
+                                <span>RERA Reg. Number</span>
+                                <span id="dynSpecRera" style="color: var(--emerald-green); font-weight: 700;">Verified (Available at site)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- RERA Disclaimer -->
+                    <div class="reveal" style="margin-top: 32px; padding: 20px; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--border-radius-md);">
+                        <h4 style="font-size: 0.9rem; color: var(--text-gold-dark); margin-bottom: 8px;"><i class="fa-solid fa-circle-info"></i> RERA Compliance & Pricing Disclaimer</h4>
+                        <p style="font-size: 0.82rem; line-height: 1.6;">*RERA Registration Number: <span id="dynPropertyRera">P52100052309</span>. Prices mentioned are indicative starting rates and exclude tax, stamp duty, and registration charges. Booking is subject to project availability. End-to-end legal title verification and guided inspections are fully assisted by 24K Realty.</p>
+                    </div>
+                </div>
+                
+                <!-- Right Sticky Consultation Sidebar -->
+                <div>
+                    <div class="glass-card reveal" style="position: sticky; top: 100px;">
+                        <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px;">Book a Guided Site Visit</h3>
+                        <p style="font-size: 0.88rem; margin-bottom: 24px;">Our property consultants provide end-to-end transport and paperwork assistance for site visits.</p>
+                        
+                        <form id="contactForm" style="display: flex; flex-direction: column; gap: 14px;">
+                            <div class="form-control-wrap" style="margin: 0;">
+                                <label for="sideName">Full Name *</label>
+                                <input type="text" id="sideName" placeholder="Your Name" class="form-input" required>
+                            </div>
+                            <div class="form-control-wrap" style="margin: 0;">
+                                <label for="sideEmail">Email Address *</label>
+                                <input type="email" id="sideEmail" placeholder="Your Email" class="form-input" required>
+                            </div>
+                            <div class="form-control-wrap" style="margin: 0;">
+                                <label for="sidePhone">WhatsApp / Mobile Number *</label>
+                                <input type="tel" id="sidePhone" placeholder="Phone Number" class="form-input" required>
+                            </div>
+                            <div class="form-control-wrap" style="margin: 0;">
+                                <label for="sideDay">Preferred Visit Day *</label>
+                                <select class="form-input" id="sideDay" required>
+                                    <option value="">Preferred Visit Day</option>
+                                    <option value="Weekday">Weekday (Mon - Fri)</option>
+                                    <option value="Saturday">Saturday</option>
+                                    <option value="Sunday">Sunday (By Appointment)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; height: 50px;">Schedule Site Visit</button>
+                        </form>
+                        
+                        <!-- Success overlay -->
+                        <div class="form-success-overlay">
+                            <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                            <h3>Schedule Request Sent!</h3>
+                            <p>We will call you to confirm transport and timing shortly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Footer --- -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../assets/images/logo-light.png" alt="24K Realty Footer Logo" class="footer-logo">
+                    <p>Premier real estate consultancy firm dedicated to providing gold-standard service in Pune. Dream spaces bridged to reality.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../properties/">Verified Properties</a></li>
+                        <li><a href="../services/">Advisory Services</a></li>
+                        <li><a href="../about/">About 24K Realty</a></li>
+                        <li><a href="../contact/">Contact & Site Visits</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Details</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Office no 408, Baner, Pune</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:24k.realty.1@gmail.com">24k.realty.1@gmail.com</a></li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+917218372145">+91 72183 72145</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 24K Realty. All Rights Reserved.</p>
+                <p style="font-size: 0.8rem; color: #94A3B8;">RERA Disclaimer: Project details and images are for representational purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Sticky Bar -->
+    <div class="mobile-bottom-bar">
+        <div class="mobile-bottom-actions">
+            <a href="tel:+917218372145" class="btn btn-secondary">
+                <i class="fa-solid fa-phone"></i> Call
+            </a>
+            <a href="#" class="btn btn-whatsapp trigger-whatsapp-direct" data-property="Property Details Page">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#contactForm" class="btn btn-primary">
+                <i class="fa-regular fa-calendar-check"></i> Book Visit
+            </a>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Widget -->
+    <div class="whatsapp-widget">
+        <a href="#" class="whatsapp-btn" id="whatsappWidget" aria-label="Chat with 24K Realty on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Main Controller Script -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
