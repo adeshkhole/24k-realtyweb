@@ -1,0 +1,22 @@
+{
+    "name": "24K Realty - Pune's Premier Real Estate & Investment Advisory",
+    "short_name": "24K Realty",
+    "icons": [
+        {
+            "src": "assets/images/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/images/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#C59B27",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "start_url": "./"
+}
